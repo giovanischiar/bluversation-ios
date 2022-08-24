@@ -131,9 +131,6 @@ extension BluetoothManager: CBPeripheralDelegate {
             let characteristic = characteristic as CBCharacteristic
             if (characteristic.uuid.isEqual(WR_UUID)) {
                 characteriticOfConnectedPeripheral = characteristic
-                let messageText = "inhaí"
-                let data = messageText.data(using: .utf8)
-                peripheral.writeValue(data!, for: characteristic, type: CBCharacteristicWriteType.withResponse)
             }
         }
     }
