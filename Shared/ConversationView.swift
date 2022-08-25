@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct ConversationView: View {
-    @ObservedObject var viewModel: MessagesViewModel
+    @ObservedObject var viewModel: AnyViewModel
     var messageSentListener: OnMessageSentListener
     @State var messageContent = ""
     

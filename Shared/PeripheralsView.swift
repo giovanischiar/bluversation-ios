@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 struct PeripheralsView: View {
-    @ObservedObject var viewModel: MessagesViewModel
+    @ObservedObject var viewModel: AnyViewModel
     var peripheralConnectedListener: OnPeripheralConnectedListener
     @State var alertOpened = false
     
@@ -31,6 +31,7 @@ struct PeripheralsView: View {
                 message: Text(""),
                 primaryButton: .default(Text("Connect"), action: {
                     guard let id = viewModel.clientPeripheral?.id else { return }
+                    viewModel.peripheralWasConnected(id: "mock", name: "mock", description: "mock")
                     peripheralConnectedListener.onPeripheralConnect(with: id)
                 }),
                 secondaryButton: .cancel()

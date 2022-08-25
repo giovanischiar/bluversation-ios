@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class MessagesViewModel: ObservableObject {
+class MessagesViewModel: ViewModel {
     @Published private(set) var peripherals: Array<PeripheralViewData> = []
     @Published private(set) var clientPeripheral: PeripheralViewData? = nil
     @Published private(set) var remotePeripheral: PeripheralViewData? = nil
@@ -34,6 +34,7 @@ class MessagesViewModel: ObservableObject {
     }
     
     func peripheralWasConnected(id: String, name: String?, description: String) {
+        if (id == "mock") { return }
         remotePeripheral = PeripheralViewData(id: id, name: name ?? "no name", description: description)
     }
     

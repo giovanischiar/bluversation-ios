@@ -6,30 +6,27 @@
 //
 
 import SwiftUI
+import Combine
+import CoreBluetooth
 
 struct ContentView: View {
-    @ObservedObject private var viewModel: MessagesViewModel
-    private var peripheralConnectedListener: OnPeripheralConnectedListener
-    private var peripheralDisconnectedListener: OnRemotePeripheralDisconnectedListener
-    private var messageSentListener: OnMessageSentListener
+    @ObservedObject private var viewModel: AnyViewModel
+    private var bluetoothManager: BluetoothManager = BluetoothManager()
+    private var cancellables: Set<AnyCancellable> = []
 
-    init(
-        viewModel: MessagesViewModel,
-        peripheralConnectedListener: OnPeripheralConnectedListener,
-        peripheralDisconnectedListener: OnRemotePeripheralDisconnectedListener,
-        messageSentListener: OnMessageSentListener
-    ) {
+    init(viewModel: AnyViewModel) {
         self.viewModel = viewModel
-        self.peripheralConnectedListener = peripheralConnectedListener
-        self.peripheralDisconnectedListener = peripheralDisconnectedListener
-        self.messageSentListener = messageSentListener
+        setPublishers(store: &cancellables)
     }
     
     var body: some View {
-        let conversationView = ConversationView(viewModel: viewModel, messageSentListener: messageSentListener)
+        let conversationView = ConversationView(
+            viewModel: viewModel,
+            messageSentListener: self
+        )
         let peripheralsView = PeripheralsView(
             viewModel: viewModel,
-            peripheralConnectedListener: peripheralConnectedListener
+            peripheralConnectedListener: self
         )
         let isRemotePeripheralNil = Binding(get: {viewModel.remotePeripheral != nil}, set: { _ in })
         
@@ -37,15 +34,75 @@ struct ContentView: View {
             ZStack {
                 peripheralsView
                 NavigationLink(
-                    destination: conversationView.onDisappear { self.peripheralDisconnectedListener.onRemotePeripheralDisconnect() },
+                    destination: conversationView.onDisappear { onRemotePeripheralDisconnect() },
                     isActive: isRemotePeripheralNil) { EmptyView() }
             }
         }
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView(viewModel: Me)
-//    }
-//}
+extension ContentView {
+    func setPublishers(store cancellables: inout Set<AnyCancellable>) {
+        bluetoothManager.connectedPeripheralPublisher
+            .sink(receiveValue: onConnect(peripheral:))
+            .store(in: &cancellables)
+        bluetoothManager.peripheralPublisher
+            .sink(receiveValue: onFind(new:))
+            .store(in: &cancellables)
+        bluetoothManager.disconnectedPeripheralPublisher
+            .sink(receiveValue: onDisconnect(peripheral:))
+            .store(in: &cancellables)
+        bluetoothManager.messageReceivedPublisher
+            .sink(receiveValue: received(a:))
+            .store(in: &cancellables)
+    }
+    
+    func onConnect(peripheral: CBPeripheral) {
+        viewModel.peripheralWasConnected(
+            id: peripheral.identifier.uuidString,
+            name: peripheral.name,
+            description: peripheral.description
+        )
+    }
+    
+    func onFind(new peripheral: CBPeripheral) {
+        viewModel.addNewDevice(
+            name: peripheral.name,
+            description: peripheral.description,
+            uuid: peripheral.identifier
+        )
+    }
+    
+    func onDisconnect(peripheral: CBPeripheral) {
+        viewModel.currentPeripheralWasDisconnected()
+    }
+    
+    func received(a message: String) {
+        viewModel.receive(a: message)
+    }
+}
+
+extension ContentView: OnPeripheralConnectedListener {
+    func onPeripheralConnect(with id: String) {
+        bluetoothManager.connectPeripheral(with: id)
+    }
+}
+
+extension ContentView: OnRemotePeripheralDisconnectedListener {
+    func onRemotePeripheralDisconnect() {
+        bluetoothManager.disconnectCurrentPeripheral()
+    }
+}
+
+extension ContentView: OnMessageSentListener {
+    func send(message: String) {
+        bluetoothManager.send(a: message)
+        viewModel.send(a: message)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(viewModel: MockMessagesViewModel().eraseToAnyItemViewModel())
+    }
+}
