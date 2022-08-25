@@ -15,30 +15,24 @@
 		AD128E2728B0E4F000B004F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD128E1428B0E4F000B004F2 /* Assets.xcassets */; };
 		AD128E3228B15F1500B004F2 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* BluetoothManager.swift */; };
 		AD128E3328B15F1500B004F2 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* BluetoothManager.swift */; };
-		AD83219E28B6D8350020375A /* OnRemotePeripheralDisconnectedListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83219D28B6D8350020375A /* OnRemotePeripheralDisconnectedListener.swift */; };
-		AD83219F28B6D8350020375A /* OnRemotePeripheralDisconnectedListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83219D28B6D8350020375A /* OnRemotePeripheralDisconnectedListener.swift */; };
-		AD8321A128B6D9280020375A /* MockMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321A028B6D9280020375A /* MockMessagesViewModel.swift */; };
-		AD8321A228B6D9280020375A /* MockMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321A028B6D9280020375A /* MockMessagesViewModel.swift */; };
-		AD8321A428B6D9EC0020375A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321A328B6D9EC0020375A /* ViewModel.swift */; };
-		AD8321A528B6D9EC0020375A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321A328B6D9EC0020375A /* ViewModel.swift */; };
-		AD943B8928B5DDAF0070D440 /* OnMessageSentListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8828B5DDAF0070D440 /* OnMessageSentListener.swift */; };
-		AD943B8A28B5DDAF0070D440 /* OnMessageSentListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8828B5DDAF0070D440 /* OnMessageSentListener.swift */; };
+		AD8321AD28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */; };
+		AD8321AE28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */; };
+		AD8321B028B6FDC10020375A /* MessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AF28B6FDC10020375A /* MessengerRepository.swift */; };
+		AD8321B128B6FDC10020375A /* MessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AF28B6FDC10020375A /* MessengerRepository.swift */; };
+		AD8321B328B72BE90020375A /* MockMessagerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321B228B72BE90020375A /* MockMessagerRepository.swift */; };
+		AD8321B428B72BE90020375A /* MockMessagerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321B228B72BE90020375A /* MockMessagerRepository.swift */; };
 		AD943B8C28B5E3F10070D440 /* MessageViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8B28B5E3F10070D440 /* MessageViewData.swift */; };
 		AD943B8D28B5E3F10070D440 /* MessageViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8B28B5E3F10070D440 /* MessageViewData.swift */; };
 		AD943B8F28B6B33D0070D440 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8E28B6B33D0070D440 /* Extensions.swift */; };
 		AD943B9028B6B33D0070D440 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8E28B6B33D0070D440 /* Extensions.swift */; };
-		AD961D6928B4BE0C00F27AA8 /* OnPeripheralClickedListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6828B4BE0C00F27AA8 /* OnPeripheralClickedListener.swift */; };
-		AD961D6A28B4BE0C00F27AA8 /* OnPeripheralClickedListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6828B4BE0C00F27AA8 /* OnPeripheralClickedListener.swift */; };
-		AD961D6C28B4D14800F27AA8 /* OnPeripheralConnectedListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6B28B4D14800F27AA8 /* OnPeripheralConnectedListener.swift */; };
-		AD961D6D28B4D14800F27AA8 /* OnPeripheralConnectedListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6B28B4D14800F27AA8 /* OnPeripheralConnectedListener.swift */; };
 		AD961D6F28B4DA5000F27AA8 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */; };
 		AD961D7028B4DA5000F27AA8 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */; };
-		AD961D7228B4DC3800F27AA8 /* PeripheralsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D7128B4DC3800F27AA8 /* PeripheralsView.swift */; };
-		AD961D7328B4DC3800F27AA8 /* PeripheralsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D7128B4DC3800F27AA8 /* PeripheralsView.swift */; };
-		ADACED4928B436F60054E7BE /* PeripheralViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4828B436F60054E7BE /* PeripheralViewData.swift */; };
-		ADACED4A28B436F60054E7BE /* PeripheralViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4828B436F60054E7BE /* PeripheralViewData.swift */; };
-		ADACED4C28B4494C0054E7BE /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4B28B4494C0054E7BE /* MessagesViewModel.swift */; };
-		ADACED4D28B4494C0054E7BE /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4B28B4494C0054E7BE /* MessagesViewModel.swift */; };
+		AD961D7228B4DC3800F27AA8 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D7128B4DC3800F27AA8 /* ContactsView.swift */; };
+		AD961D7328B4DC3800F27AA8 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D7128B4DC3800F27AA8 /* ContactsView.swift */; };
+		ADACED4928B436F60054E7BE /* ContactViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4828B436F60054E7BE /* ContactViewData.swift */; };
+		ADACED4A28B436F60054E7BE /* ContactViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4828B436F60054E7BE /* ContactViewData.swift */; };
+		ADACED4C28B4494C0054E7BE /* MessengerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */; };
+		ADACED4D28B4494C0054E7BE /* MessengerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,18 +44,15 @@
 		AD128E2128B0E4F000B004F2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		AD128E3028B0FDFC00B004F2 /* slowpoke--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "slowpoke--iOS--Info.plist"; sourceTree = "<group>"; };
 		AD128E3128B15F1500B004F2 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
-		AD83219D28B6D8350020375A /* OnRemotePeripheralDisconnectedListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnRemotePeripheralDisconnectedListener.swift; sourceTree = "<group>"; };
-		AD8321A028B6D9280020375A /* MockMessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessagesViewModel.swift; sourceTree = "<group>"; };
-		AD8321A328B6D9EC0020375A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		AD943B8828B5DDAF0070D440 /* OnMessageSentListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnMessageSentListener.swift; sourceTree = "<group>"; };
+		AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothMessengerRepository.swift; sourceTree = "<group>"; };
+		AD8321AF28B6FDC10020375A /* MessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerRepository.swift; sourceTree = "<group>"; };
+		AD8321B228B72BE90020375A /* MockMessagerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessagerRepository.swift; sourceTree = "<group>"; };
 		AD943B8B28B5E3F10070D440 /* MessageViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewData.swift; sourceTree = "<group>"; };
 		AD943B8E28B6B33D0070D440 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		AD961D6828B4BE0C00F27AA8 /* OnPeripheralClickedListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnPeripheralClickedListener.swift; sourceTree = "<group>"; };
-		AD961D6B28B4D14800F27AA8 /* OnPeripheralConnectedListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnPeripheralConnectedListener.swift; sourceTree = "<group>"; };
 		AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
-		AD961D7128B4DC3800F27AA8 /* PeripheralsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralsView.swift; sourceTree = "<group>"; };
-		ADACED4828B436F60054E7BE /* PeripheralViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralViewData.swift; sourceTree = "<group>"; };
-		ADACED4B28B4494C0054E7BE /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
+		AD961D7128B4DC3800F27AA8 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		ADACED4828B436F60054E7BE /* ContactViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewData.swift; sourceTree = "<group>"; };
+		ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,22 +86,12 @@
 		AD128E1128B0E4E800B004F2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AD8321AA28B6FBB60020375A /* model */,
+				AD8321A928B6FB610020375A /* viewmodel */,
+				AD8321A628B6FB070020375A /* view */,
 				AD128E1228B0E4E800B004F2 /* SlowpokeApp.swift */,
-				AD128E1328B0E4E800B004F2 /* ContentView.swift */,
-				AD128E1428B0E4F000B004F2 /* Assets.xcassets */,
 				AD128E3128B15F1500B004F2 /* BluetoothManager.swift */,
-				ADACED4828B436F60054E7BE /* PeripheralViewData.swift */,
-				ADACED4B28B4494C0054E7BE /* MessagesViewModel.swift */,
-				AD961D6828B4BE0C00F27AA8 /* OnPeripheralClickedListener.swift */,
-				AD961D6B28B4D14800F27AA8 /* OnPeripheralConnectedListener.swift */,
-				AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */,
-				AD961D7128B4DC3800F27AA8 /* PeripheralsView.swift */,
-				AD943B8828B5DDAF0070D440 /* OnMessageSentListener.swift */,
-				AD943B8B28B5E3F10070D440 /* MessageViewData.swift */,
-				AD943B8E28B6B33D0070D440 /* Extensions.swift */,
-				AD83219D28B6D8350020375A /* OnRemotePeripheralDisconnectedListener.swift */,
-				AD8321A028B6D9280020375A /* MockMessagesViewModel.swift */,
-				AD8321A328B6D9EC0020375A /* ViewModel.swift */,
+				AD128E1428B0E4F000B004F2 /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -130,6 +111,53 @@
 				AD128E2128B0E4F000B004F2 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		AD8321A628B6FB070020375A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AD8321A728B6FB190020375A /* viewdata */,
+				AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */,
+				AD961D7128B4DC3800F27AA8 /* ContactsView.swift */,
+				AD128E1328B0E4E800B004F2 /* ContentView.swift */,
+				AD943B8E28B6B33D0070D440 /* Extensions.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		AD8321A728B6FB190020375A /* viewdata */ = {
+			isa = PBXGroup;
+			children = (
+				AD943B8B28B5E3F10070D440 /* MessageViewData.swift */,
+				ADACED4828B436F60054E7BE /* ContactViewData.swift */,
+			);
+			path = viewdata;
+			sourceTree = "<group>";
+		};
+		AD8321A928B6FB610020375A /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		AD8321AA28B6FBB60020375A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AD8321AB28B6FBBF0020375A /* repository */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		AD8321AB28B6FBBF0020375A /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */,
+				AD8321AF28B6FDC10020375A /* MessengerRepository.swift */,
+				AD8321B228B72BE90020375A /* MockMessagerRepository.swift */,
+			);
+			path = repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,20 +258,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD961D6C28B4D14800F27AA8 /* OnPeripheralConnectedListener.swift in Sources */,
-				ADACED4C28B4494C0054E7BE /* MessagesViewModel.swift in Sources */,
-				AD8321A128B6D9280020375A /* MockMessagesViewModel.swift in Sources */,
-				ADACED4928B436F60054E7BE /* PeripheralViewData.swift in Sources */,
-				AD961D6928B4BE0C00F27AA8 /* OnPeripheralClickedListener.swift in Sources */,
-				AD961D7228B4DC3800F27AA8 /* PeripheralsView.swift in Sources */,
+				AD8321B328B72BE90020375A /* MockMessagerRepository.swift in Sources */,
+				ADACED4C28B4494C0054E7BE /* MessengerViewModel.swift in Sources */,
+				ADACED4928B436F60054E7BE /* ContactViewData.swift in Sources */,
+				AD961D7228B4DC3800F27AA8 /* ContactsView.swift in Sources */,
 				AD128E2428B0E4F000B004F2 /* ContentView.swift in Sources */,
 				AD128E3228B15F1500B004F2 /* BluetoothManager.swift in Sources */,
 				AD128E2228B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
 				AD943B8F28B6B33D0070D440 /* Extensions.swift in Sources */,
-				AD8321A428B6D9EC0020375A /* ViewModel.swift in Sources */,
-				AD83219E28B6D8350020375A /* OnRemotePeripheralDisconnectedListener.swift in Sources */,
 				AD943B8C28B5E3F10070D440 /* MessageViewData.swift in Sources */,
-				AD943B8928B5DDAF0070D440 /* OnMessageSentListener.swift in Sources */,
+				AD8321AD28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */,
+				AD8321B028B6FDC10020375A /* MessengerRepository.swift in Sources */,
 				AD961D6F28B4DA5000F27AA8 /* ConversationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,20 +277,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD961D6D28B4D14800F27AA8 /* OnPeripheralConnectedListener.swift in Sources */,
-				ADACED4D28B4494C0054E7BE /* MessagesViewModel.swift in Sources */,
-				AD8321A228B6D9280020375A /* MockMessagesViewModel.swift in Sources */,
-				ADACED4A28B436F60054E7BE /* PeripheralViewData.swift in Sources */,
-				AD961D6A28B4BE0C00F27AA8 /* OnPeripheralClickedListener.swift in Sources */,
-				AD961D7328B4DC3800F27AA8 /* PeripheralsView.swift in Sources */,
+				AD8321B428B72BE90020375A /* MockMessagerRepository.swift in Sources */,
+				ADACED4D28B4494C0054E7BE /* MessengerViewModel.swift in Sources */,
+				ADACED4A28B436F60054E7BE /* ContactViewData.swift in Sources */,
+				AD961D7328B4DC3800F27AA8 /* ContactsView.swift in Sources */,
 				AD128E2528B0E4F000B004F2 /* ContentView.swift in Sources */,
 				AD128E3328B15F1500B004F2 /* BluetoothManager.swift in Sources */,
 				AD128E2328B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
 				AD943B9028B6B33D0070D440 /* Extensions.swift in Sources */,
-				AD8321A528B6D9EC0020375A /* ViewModel.swift in Sources */,
-				AD83219F28B6D8350020375A /* OnRemotePeripheralDisconnectedListener.swift in Sources */,
 				AD943B8D28B5E3F10070D440 /* MessageViewData.swift in Sources */,
-				AD943B8A28B5DDAF0070D440 /* OnMessageSentListener.swift in Sources */,
+				AD8321AE28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */,
+				AD8321B128B6FDC10020375A /* MessengerRepository.swift in Sources */,
 				AD961D7028B4DA5000F27AA8 /* ConversationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

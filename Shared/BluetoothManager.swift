@@ -1,6 +1,6 @@
 //
 //  BluetoothManager.swift
-//  slowpoke
+//  Shared
 //
 //  Created by Giovani Schiar on 20/08/22.
 //

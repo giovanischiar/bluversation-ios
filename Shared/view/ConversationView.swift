@@ -1,17 +1,15 @@
 //
 //  ConversationView.swift
-//  slowpoke
+//  view
 //
 //  Created by Giovani Schiar on 23/08/22.
 //
 
 import SwiftUI
-import Combine
 
 struct ConversationView: View {
-    @ObservedObject var viewModel: AnyViewModel
-    var messageSentListener: OnMessageSentListener
-    @State var messageContent = ""
+    @ObservedObject var viewModel: MessengerViewModel
+    @State var message = ""
     
     var body: some View {
         ScrollViewReader { scrollView in
@@ -43,7 +41,7 @@ struct ConversationView: View {
             
             TextField (
                 "Send Message",
-                text: $messageContent
+                text: $message
             )
             .onReceive(keyboardPublisher) { value in
                 if(value) {
@@ -53,12 +51,11 @@ struct ConversationView: View {
             }
             .frame(maxWidth: .infinity, alignment: .bottom)
             .onSubmit {
-                messageSentListener.send(message: messageContent)
-                messageContent = ""
+                viewModel.send(a: message)
+                message = ""
             }
 
         }
-        .navigationTitle(viewModel.remotePeripheral?.name ?? "Conversation")
+        .navigationTitle(viewModel.remoteContact?.name ?? "Conversation")
     }
 }
-

@@ -1,6 +1,6 @@
 //
 //  MessageViewData.swift
-//  slowpoke
+//  viewdata
 //
 //  Created by Giovani Schiar on 23/08/22.
 //
