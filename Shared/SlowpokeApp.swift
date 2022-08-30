@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct SlowpokeApp: App {
-    private let viewModel = MessengerViewModel()
-
+    @ObservedObject private var viewModel = MessengerViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: viewModel)
+            ContentView()
+                .environmentObject(viewModel)
         }
     }
 }

@@ -8,33 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject private var viewModel: MessengerViewModel
-
-    init(viewModel: MessengerViewModel) {
-        self.viewModel = viewModel
-    }
+    @EnvironmentObject private var viewModel: MessengerViewModel
     
     var body: some View {
-        let conversationView = ConversationView(viewModel: viewModel)
-        let contactsView = ContactsView(viewModel: viewModel)
-        let isRemoteContactNil = Binding(get: {viewModel.remoteContact != nil}, set: { _ in })
-        
+        let contactsView = ContactsView()
+        let conversationView = ConversationView()
+#if os(iOS)
         NavigationView {
-            ZStack {
+            VStack {
                 contactsView
                 NavigationLink(
-                    destination: conversationView.onDisappear { viewModel.disconnectRemoteContact() },
-                    isActive: isRemoteContactNil) { EmptyView() }
+                    destination: conversationView,
+                    isActive: .constant(viewModel.remoteContact != nil)
+                ) { EmptyView() }
             }
         }
+#else
+        NavigationView {
+            contactsView
+            conversationView
+        }
+#endif
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = MessengerViewModel(
-            messengerRepository: MockMessengerRepository()
-        )
-        ContentView(viewModel: viewModel)
+        let viewModel = MessengerViewModel(messengerRepository: MockMessengerRepository())
+        ContentView().environmentObject(viewModel)
     }
 }

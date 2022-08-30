@@ -17,6 +17,7 @@ class BluetoothManager: NSObject {
     let connectedPeripheralPublisher = PassthroughSubject<CBPeripheral, Never>()
     let disconnectedPeripheralPublisher = PassthroughSubject<CBPeripheral, Never>()
     let messageReceivedPublisher = PassthroughSubject<String, Never>()
+    let messageSentPublisher = PassthroughSubject<String, Never>()
 
     private var peripheralsFound: [String: CBPeripheral] = [:]
     private var connectedPeripheral: CBPeripheral?
@@ -50,6 +51,7 @@ class BluetoothManager: NSObject {
         guard let characteristic = characteriticOfConnectedPeripheral else { return }
         guard let peripheral = connectedPeripheral else { return }
         let data = message.data(using: .utf8)
+        messageSentPublisher.send(message)
         peripheral.writeValue(data!, for: characteristic, type: CBCharacteristicWriteType.withResponse)
     }
 }

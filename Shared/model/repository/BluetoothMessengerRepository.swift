@@ -5,40 +5,67 @@
 //  Created by Giovani Schiar on 24/08/22.
 //
 
-import Combine
+import class Combine.AnyCancellable
+import struct Foundation.UUID
 
 class BluetoothMessengerRepository: MessengerRepository {
-    var bluetoothManager = BluetoothManager()
-    var cancellables: Set<AnyCancellable> = []
+    private var bluetoothManager = BluetoothManager()
+    private var cancellables: Set<AnyCancellable> = []
+    private var messagesPerContact: [UUID:[Message]] = [:]
+    private var remoteContact: Contact?
     
-    func registerForContacts(callback: @escaping (_ id: String, _ name: String?, _ description: String) -> Void) {
+    func registerForContacts(callback: @escaping (_ contact: Contact) -> Void) {
         bluetoothManager.peripheralPublisher
             .sink { peripheral in
-                callback(peripheral.identifier.uuidString, peripheral.name, peripheral.description)
+                let contact = Contact(id: peripheral.identifier, name: peripheral.name, description: peripheral.description)
+                callback(contact)
             }
             .store(in: &cancellables)
     }
     
-    func registerForMessages(callback: @escaping (_ message: String) -> Void) {
+    func registerForMessages(callback: @escaping (_ message: Message) -> Void) {
+        bluetoothManager.messageSentPublisher
+            .sink {
+                guard let id = self.remoteContact?.id else { return }
+                var messages = self.messagesPerContact[id] ?? []
+                let message = Message(sent: true, content: $0)
+                messages.append(message)
+                self.messagesPerContact[id] = messages
+                callback(message)
+            }
+            .store(in: &cancellables)
+        
         bluetoothManager.messageReceivedPublisher
-            .sink { callback($0) }
+            .sink {
+                guard let id = self.remoteContact?.id else { return }
+                var messages = self.messagesPerContact[id] ?? []
+                let message = Message(sent: false, content: $0)
+                messages.append(message)
+                self.messagesPerContact[id] = messages
+                callback(message)
+            }
             .store(in: &cancellables)
     }
     
-    func connectContact(with id: String, callback: @escaping (_ id: String, _ name: String?, _ description: String) -> Void) {
+    func connectContact(with id: String, callback: @escaping (_ contact: Contact, _ messages: [Message]) -> Void) {
         bluetoothManager.connectedPeripheralPublisher
             .sink { peripheral in
-                callback(peripheral.identifier.uuidString, peripheral.name, peripheral.description)
+                let remoteContact = Contact(id: peripheral.identifier, name: peripheral.name, description: peripheral.description)
+                self.remoteContact = remoteContact
+                let messagesFromContact = self.messagesPerContact[remoteContact.id] ?? []
+                callback(remoteContact, messagesFromContact)
             }
             .store(in: &cancellables)
         bluetoothManager.connectPeripheral(with: id)
     }
     
-    func disconnectRemoteContact(callback: @escaping (_ id: String, _ name: String?, _ description: String) -> Void) {
+    func disconnectRemoteContact(callback: @escaping (_ contact: Contact) -> Void) {
         bluetoothManager.disconnectedPeripheralPublisher.sink { peripheral in
-            callback(peripheral.identifier.uuidString, peripheral.name, peripheral.description)
+            let contactDisconnected = Contact(id: peripheral.identifier, name: peripheral.name, description: peripheral.description)
+            callback(contactDisconnected)
         }
         .store(in: &cancellables)
+        bluetoothManager.disconnectCurrentPeripheral()
     }
     
     func send(a message: String) {

@@ -10,7 +10,6 @@ import Foundation
 struct ContactViewData {
     let id: String
     let name: String
-    let description: String
 }
 
 extension ContactViewData: Hashable {}

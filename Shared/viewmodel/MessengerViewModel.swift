@@ -13,7 +13,7 @@ class MessengerViewModel: ObservableObject {
     @Published private(set) var contacts: Array<ContactViewData> = []
     @Published private(set) var clientContact: ContactViewData? = nil
     @Published private(set) var remoteContact: ContactViewData? = nil
-    @Published private(set) var messages: [MessageViewData] = []
+    @Published private(set) var currentMessages: [MessageViewData] = []
     
     init(messengerRepository: MessengerRepository = BluetoothMessengerRepository()) {
         self.messengerRepository = messengerRepository
@@ -21,42 +21,48 @@ class MessengerViewModel: ObservableObject {
     }
     
     private func registerForContacts() {
-        messengerRepository.registerForContacts(callback: addNewContact(id:name:description:))
+        messengerRepository.registerForContacts(callback: addNewContact(contact:))
     }
     
-    private func addNewContact(id: String, name: String?, description: String) {
-        let name = name ?? "no name"
-        let peripheralViewData = ContactViewData(id: id, name: name, description: description)
-        if !contacts.contains(peripheralViewData) {
-            contacts.append(peripheralViewData)
+    private func addNewContact(contact: Contact) {
+        let contactViewData = contact.toViewData()
+        if !contacts.contains(contactViewData) {
+            contacts.append(contactViewData)
         } else {
-            guard let index = contacts.firstIndex(of: peripheralViewData) else { return }
-            contacts[index] = peripheralViewData
+            guard let index = contacts.firstIndex(of: contactViewData) else { return }
+            contacts[index] = contactViewData
         }
     }
     
     func connectClientContact() {
         guard let id = clientContact?.id else { return }
-        messengerRepository.connectContact(with: id, callback: contactWasConnected(id: name: description:))
+        if (remoteContact != nil) {
+            messengerRepository.disconnectRemoteContact(callback: contactWasDisconnected(contact:))
+        } else {
+            messengerRepository.connectContact(with: id, callback: contactWasConnected(contact:messages:))
+        }
     }
     
-    private func contactWasConnected(id: String, name: String?, description: String) {
+    private func contactWasConnected(contact: Contact, messages: [Message]) {
         clientContact = nil
-        remoteContact = ContactViewData(id: id, name: name ?? "no name", description: description)
+        remoteContact = contact.toViewData()
         messengerRepository.registerForMessages(callback: receive(a:))
+        currentMessages = messages.toViewData()
     }
     
-    private func receive(a message: String) {
-        messages.append(MessageViewData(sent: false, content: message))
+    private func receive(a message: Message) {
+        currentMessages.append(message.toViewData())
     }
     
     func disconnectRemoteContact() {
-        messages.removeAll()
-        messengerRepository.disconnectRemoteContact(callback: contactWasDisconnected(id: name: description:))
+        messengerRepository.disconnectRemoteContact(callback: contactWasDisconnected(contact:))
     }
     
-    private func contactWasDisconnected(id: String, name: String?, description: String) {
+    private func contactWasDisconnected(contact: Contact) {
         remoteContact = nil
+        if let id = clientContact?.id {
+            messengerRepository.connectContact(with: id, callback: contactWasConnected(contact:messages:))
+        }
     }
     
     func contactWasToggled(with id: String) {
@@ -69,6 +75,5 @@ class MessengerViewModel: ObservableObject {
     
     func send(a message: String) {
         messengerRepository.send(a: message)
-        messages.append(MessageViewData(sent: true, content: message))
     }
 }

@@ -15,16 +15,26 @@
 		AD128E2728B0E4F000B004F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD128E1428B0E4F000B004F2 /* Assets.xcassets */; };
 		AD128E3228B15F1500B004F2 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* BluetoothManager.swift */; };
 		AD128E3328B15F1500B004F2 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* BluetoothManager.swift */; };
+		AD4483A328BA078A00116D00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4483A228BA078A00116D00 /* Constants.swift */; };
+		AD4483A428BA078A00116D00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4483A228BA078A00116D00 /* Constants.swift */; };
+		AD55801C28B997E90027A6FE /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55801B28B997E90027A6FE /* ArrayExtensions.swift */; };
+		AD55801D28B997E90027A6FE /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55801B28B997E90027A6FE /* ArrayExtensions.swift */; };
 		AD8321AD28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */; };
 		AD8321AE28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */; };
 		AD8321B028B6FDC10020375A /* MessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AF28B6FDC10020375A /* MessengerRepository.swift */; };
 		AD8321B128B6FDC10020375A /* MessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AF28B6FDC10020375A /* MessengerRepository.swift */; };
-		AD8321B328B72BE90020375A /* MockMessagerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321B228B72BE90020375A /* MockMessagerRepository.swift */; };
-		AD8321B428B72BE90020375A /* MockMessagerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321B228B72BE90020375A /* MockMessagerRepository.swift */; };
+		AD8321B328B72BE90020375A /* MockMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321B228B72BE90020375A /* MockMessengerRepository.swift */; };
+		AD8321B428B72BE90020375A /* MockMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321B228B72BE90020375A /* MockMessengerRepository.swift */; };
+		AD85DA5728B98A4800694753 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD85DA5628B98A4800694753 /* Contact.swift */; };
+		AD85DA5828B98A4800694753 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD85DA5628B98A4800694753 /* Contact.swift */; };
+		AD85DA5A28B98A8900694753 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD85DA5928B98A8900694753 /* Message.swift */; };
+		AD85DA5B28B98A8900694753 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD85DA5928B98A8900694753 /* Message.swift */; };
+		AD85DA5D28B98D6000694753 /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD85DA5C28B98D6000694753 /* ModelExtensions.swift */; };
+		AD85DA5E28B98D6000694753 /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD85DA5C28B98D6000694753 /* ModelExtensions.swift */; };
 		AD943B8C28B5E3F10070D440 /* MessageViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8B28B5E3F10070D440 /* MessageViewData.swift */; };
 		AD943B8D28B5E3F10070D440 /* MessageViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8B28B5E3F10070D440 /* MessageViewData.swift */; };
-		AD943B8F28B6B33D0070D440 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8E28B6B33D0070D440 /* Extensions.swift */; };
-		AD943B9028B6B33D0070D440 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8E28B6B33D0070D440 /* Extensions.swift */; };
+		AD943B8F28B6B33D0070D440 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8E28B6B33D0070D440 /* ViewExtensions.swift */; };
+		AD943B9028B6B33D0070D440 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8E28B6B33D0070D440 /* ViewExtensions.swift */; };
 		AD961D6F28B4DA5000F27AA8 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */; };
 		AD961D7028B4DA5000F27AA8 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */; };
 		AD961D7228B4DC3800F27AA8 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D7128B4DC3800F27AA8 /* ContactsView.swift */; };
@@ -44,11 +54,16 @@
 		AD128E2128B0E4F000B004F2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		AD128E3028B0FDFC00B004F2 /* slowpoke--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "slowpoke--iOS--Info.plist"; sourceTree = "<group>"; };
 		AD128E3128B15F1500B004F2 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		AD4483A228BA078A00116D00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AD55801B28B997E90027A6FE /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothMessengerRepository.swift; sourceTree = "<group>"; };
 		AD8321AF28B6FDC10020375A /* MessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerRepository.swift; sourceTree = "<group>"; };
-		AD8321B228B72BE90020375A /* MockMessagerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessagerRepository.swift; sourceTree = "<group>"; };
+		AD8321B228B72BE90020375A /* MockMessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessengerRepository.swift; sourceTree = "<group>"; };
+		AD85DA5628B98A4800694753 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		AD85DA5928B98A8900694753 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		AD85DA5C28B98D6000694753 /* ModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
 		AD943B8B28B5E3F10070D440 /* MessageViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewData.swift; sourceTree = "<group>"; };
-		AD943B8E28B6B33D0070D440 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AD943B8E28B6B33D0070D440 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		AD961D7128B4DC3800F27AA8 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		ADACED4828B436F60054E7BE /* ContactViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewData.swift; sourceTree = "<group>"; };
@@ -120,7 +135,8 @@
 				AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */,
 				AD961D7128B4DC3800F27AA8 /* ContactsView.swift */,
 				AD128E1328B0E4E800B004F2 /* ContentView.swift */,
-				AD943B8E28B6B33D0070D440 /* Extensions.swift */,
+				AD943B8E28B6B33D0070D440 /* ViewExtensions.swift */,
+				AD4483A228BA078A00116D00 /* Constants.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -137,7 +153,9 @@
 		AD8321A928B6FB610020375A /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				AD55801B28B997E90027A6FE /* ArrayExtensions.swift */,
 				ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */,
+				AD85DA5C28B98D6000694753 /* ModelExtensions.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -146,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				AD8321AB28B6FBBF0020375A /* repository */,
+				AD85DA5628B98A4800694753 /* Contact.swift */,
+				AD85DA5928B98A8900694753 /* Message.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -155,7 +175,7 @@
 			children = (
 				AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */,
 				AD8321AF28B6FDC10020375A /* MessengerRepository.swift */,
-				AD8321B228B72BE90020375A /* MockMessagerRepository.swift */,
+				AD8321B228B72BE90020375A /* MockMessengerRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -258,18 +278,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD8321B328B72BE90020375A /* MockMessagerRepository.swift in Sources */,
-				ADACED4C28B4494C0054E7BE /* MessengerViewModel.swift in Sources */,
-				ADACED4928B436F60054E7BE /* ContactViewData.swift in Sources */,
-				AD961D7228B4DC3800F27AA8 /* ContactsView.swift in Sources */,
-				AD128E2428B0E4F000B004F2 /* ContentView.swift in Sources */,
-				AD128E3228B15F1500B004F2 /* BluetoothManager.swift in Sources */,
-				AD128E2228B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
-				AD943B8F28B6B33D0070D440 /* Extensions.swift in Sources */,
-				AD943B8C28B5E3F10070D440 /* MessageViewData.swift in Sources */,
+				AD85DA5728B98A4800694753 /* Contact.swift in Sources */,
+				AD4483A328BA078A00116D00 /* Constants.swift in Sources */,
+				AD85DA5A28B98A8900694753 /* Message.swift in Sources */,
 				AD8321AD28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */,
 				AD8321B028B6FDC10020375A /* MessengerRepository.swift in Sources */,
+				AD8321B328B72BE90020375A /* MockMessengerRepository.swift in Sources */,
+				AD943B8F28B6B33D0070D440 /* ViewExtensions.swift in Sources */,
+				AD961D7228B4DC3800F27AA8 /* ContactsView.swift in Sources */,
+				ADACED4928B436F60054E7BE /* ContactViewData.swift in Sources */,
+				AD128E2428B0E4F000B004F2 /* ContentView.swift in Sources */,
 				AD961D6F28B4DA5000F27AA8 /* ConversationView.swift in Sources */,
+				AD943B8C28B5E3F10070D440 /* MessageViewData.swift in Sources */,
+				ADACED4C28B4494C0054E7BE /* MessengerViewModel.swift in Sources */,
+				AD128E3228B15F1500B004F2 /* BluetoothManager.swift in Sources */,
+				AD85DA5D28B98D6000694753 /* ModelExtensions.swift in Sources */,
+				AD128E2228B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
+				AD55801C28B997E90027A6FE /* ArrayExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,18 +302,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD8321B428B72BE90020375A /* MockMessagerRepository.swift in Sources */,
-				ADACED4D28B4494C0054E7BE /* MessengerViewModel.swift in Sources */,
-				ADACED4A28B436F60054E7BE /* ContactViewData.swift in Sources */,
-				AD961D7328B4DC3800F27AA8 /* ContactsView.swift in Sources */,
-				AD128E2528B0E4F000B004F2 /* ContentView.swift in Sources */,
-				AD128E3328B15F1500B004F2 /* BluetoothManager.swift in Sources */,
-				AD128E2328B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
-				AD943B9028B6B33D0070D440 /* Extensions.swift in Sources */,
-				AD943B8D28B5E3F10070D440 /* MessageViewData.swift in Sources */,
+				AD85DA5828B98A4800694753 /* Contact.swift in Sources */,
+				AD4483A428BA078A00116D00 /* Constants.swift in Sources */,
+				AD85DA5B28B98A8900694753 /* Message.swift in Sources */,
 				AD8321AE28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */,
 				AD8321B128B6FDC10020375A /* MessengerRepository.swift in Sources */,
+				AD8321B428B72BE90020375A /* MockMessengerRepository.swift in Sources */,
+				AD943B9028B6B33D0070D440 /* ViewExtensions.swift in Sources */,
+				AD961D7328B4DC3800F27AA8 /* ContactsView.swift in Sources */,
+				ADACED4A28B436F60054E7BE /* ContactViewData.swift in Sources */,
+				AD128E2528B0E4F000B004F2 /* ContentView.swift in Sources */,
 				AD961D7028B4DA5000F27AA8 /* ConversationView.swift in Sources */,
+				AD943B8D28B5E3F10070D440 /* MessageViewData.swift in Sources */,
+				ADACED4D28B4494C0054E7BE /* MessengerViewModel.swift in Sources */,
+				AD128E3328B15F1500B004F2 /* BluetoothManager.swift in Sources */,
+				AD85DA5E28B98D6000694753 /* ModelExtensions.swift in Sources */,
+				AD128E2328B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
+				AD55801D28B997E90027A6FE /* ArrayExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +445,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "slowpoke--iOS--Info.plist";
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "O app precisa usar bluetooth para procurar dispositivos";
+				INFOPLIST_KEY_CFBundleDisplayName = Slowpoke;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,7 +477,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "slowpoke--iOS--Info.plist";
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "O app precisa usar bluetooth para procurar dispositivos";
+				INFOPLIST_KEY_CFBundleDisplayName = Slowpoke;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -483,7 +513,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "O app precisa usar bluetooth para procurar dispositivos";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App uses bluetooth to talk and search other contatcs";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,7 +543,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "O app precisa usar bluetooth para procurar dispositivos";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App uses bluetooth to talk and search other contatcs";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
