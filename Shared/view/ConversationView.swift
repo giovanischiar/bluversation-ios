@@ -17,9 +17,10 @@ struct ConversationView: View {
             VStack {
                 ScrollView {
                     ForEach(Array(viewModel.currentMessages.enumerated()), id: \.element) { index, message in
-                        MessageBalloon(index: index, message: message)
+                        let lastMessageDirection = viewModel.currentMessages.lastIndexDirection(index: index)
+                        MessageBalloon(index: index, message: message, lastMessageDirection: lastMessageDirection)
                         Spacer().frame(
-                            height: calculateMessageBalloonMargin(index: index, sent: message.sent)
+                            height: calculateMessageBalloonMargin(index: index, direction: message.direction)
                         )
                     }.frame(maxWidth: .infinity)
                 }
@@ -54,46 +55,12 @@ extension ConversationView {
         scrollView.scrollTo(last)
     }
     
-    func calculateMessageBalloonMargin(index: Int, sent: Bool) -> CGFloat {
+    func calculateMessageBalloonMargin(index: Int, direction: Direction) -> CGFloat {
         let currentMessages = viewModel.currentMessages
         if (index + 1 >= currentMessages.count) { return 0 }
-        let isNextMessageSent = currentMessages[index + 1].sent
-        if (isNextMessageSent == sent) { return Dimens.space_between_same_sender_messages }
+        let nextMessageDirection = currentMessages[index + 1].direction
+        if (nextMessageDirection == direction) { return Dimens.space_between_same_sender_messages }
         return Dimens.space_between_different_sender_messages
-    }
-}
-
-struct MessageBalloon: View {
-    var index: Int
-    var message: MessageViewData
-    
-    var body: some View {
-        HStack() {
-            if (message.sent) {
-                Spacer().frame(width: Dimens.message_balloon_end_margin)
-                Spacer()
-            } else {
-                Spacer().frame(width: Dimens.message_balloon_start_margin)
-            }
-            Text(message.content)
-                .padding(.all, Dimens.message_balloon_padding)
-                .background(generateBackgroundColor(to: message.sent))
-                .cornerRadius(Dimens.message_balloon_border_radius)
-                .foregroundColor(Color(rgb: Colors.message_text_color))
-            if (!message.sent) {
-                Spacer().frame(width: Dimens.message_balloon_end_margin)
-                Spacer()
-            } else {
-                Spacer().frame(width: Dimens.message_balloon_start_margin)
-            }
-        }
-    }
-}
-
-extension MessageBalloon {
-    func generateBackgroundColor(to sent: Bool) -> Color {
-        if sent { return Color(rgb: Colors.message_received_background_color) }
-        return Color(rgb: Colors.message_sent_background_color)
     }
 }
 

@@ -13,6 +13,6 @@ extension Contact {
 
 extension Message {
     func toViewData() -> MessageViewData {
-        return MessageViewData(sent: sent, content: content)
+        return MessageViewData(direction: sent ? .right : .left, content: content)
     }
 }

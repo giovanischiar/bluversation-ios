@@ -11,3 +11,9 @@ extension Array where Array.Element == Message {
     }
 }
 
+extension Array where Array.Element == MessageViewData {
+    func lastIndexDirection(index: Int) -> Direction {
+        if index == 0 { return !self[index].direction }
+        return self[index - 1].direction
+    }
+}

@@ -8,7 +8,7 @@
 import Foundation
 
 struct MessageViewData {
-    let sent: Bool
+    let direction: Direction
     let content: String
     let id: UUID = UUID()
 }
