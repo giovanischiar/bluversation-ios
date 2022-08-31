@@ -49,6 +49,8 @@
 		ADACED4A28B436F60054E7BE /* ContactViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4828B436F60054E7BE /* ContactViewData.swift */; };
 		ADACED4C28B4494C0054E7BE /* MessengerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */; };
 		ADACED4D28B4494C0054E7BE /* MessengerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */; };
+		ADF6802228C00CD40072D524 /* TextFieldEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6802128C00CD40072D524 /* TextFieldEditor.swift */; };
+		ADF6802328C00CD40072D524 /* TextFieldEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6802128C00CD40072D524 /* TextFieldEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,7 @@
 		AD961D7128B4DC3800F27AA8 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		ADACED4828B436F60054E7BE /* ContactViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewData.swift; sourceTree = "<group>"; };
 		ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerViewModel.swift; sourceTree = "<group>"; };
+		ADF6802128C00CD40072D524 /* TextFieldEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +199,7 @@
 			children = (
 				AD8C1EBD28BEDEDF00A40CB4 /* MessageBalloon.swift */,
 				AD8C1EC028BEDF1700A40CB4 /* MessageTriangleShape.swift */,
+				ADF6802128C00CD40072D524 /* TextFieldEditor.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -300,6 +304,7 @@
 			files = (
 				AD85DA5728B98A4800694753 /* Contact.swift in Sources */,
 				AD4483A328BA078A00116D00 /* Constants.swift in Sources */,
+				ADF6802228C00CD40072D524 /* TextFieldEditor.swift in Sources */,
 				AD85DA5A28B98A8900694753 /* Message.swift in Sources */,
 				AD8321AD28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */,
 				AD8321B028B6FDC10020375A /* MessengerRepository.swift in Sources */,
@@ -327,6 +332,7 @@
 			files = (
 				AD85DA5828B98A4800694753 /* Contact.swift in Sources */,
 				AD4483A428BA078A00116D00 /* Constants.swift in Sources */,
+				ADF6802328C00CD40072D524 /* TextFieldEditor.swift in Sources */,
 				AD85DA5B28B98A8900694753 /* Message.swift in Sources */,
 				AD8321AE28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */,
 				AD8321B128B6FDC10020375A /* MessengerRepository.swift in Sources */,
