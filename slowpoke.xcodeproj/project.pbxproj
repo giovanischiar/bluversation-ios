@@ -19,6 +19,8 @@
 		AD4483A428BA078A00116D00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4483A228BA078A00116D00 /* Constants.swift */; };
 		AD55801C28B997E90027A6FE /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55801B28B997E90027A6FE /* ArrayExtensions.swift */; };
 		AD55801D28B997E90027A6FE /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55801B28B997E90027A6FE /* ArrayExtensions.swift */; };
+		AD816C0228CBB72D00CDEEE0 /* MockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */; };
+		AD816C0328CBB72D00CDEEE0 /* MockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */; };
 		AD8321AD28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */; };
 		AD8321AE28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */; };
 		AD8321B028B6FDC10020375A /* MessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AF28B6FDC10020375A /* MessengerRepository.swift */; };
@@ -64,6 +66,7 @@
 		AD128E3128B15F1500B004F2 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		AD4483A228BA078A00116D00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AD55801B28B997E90027A6FE /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGenerator.swift; sourceTree = "<group>"; };
 		AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothMessengerRepository.swift; sourceTree = "<group>"; };
 		AD8321AF28B6FDC10020375A /* MessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerRepository.swift; sourceTree = "<group>"; };
 		AD8321B228B72BE90020375A /* MockMessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessengerRepository.swift; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 				AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */,
 				AD8321AF28B6FDC10020375A /* MessengerRepository.swift */,
 				AD8321B228B72BE90020375A /* MockMessengerRepository.swift */,
+				AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -305,6 +309,7 @@
 				AD85DA5728B98A4800694753 /* Contact.swift in Sources */,
 				AD4483A328BA078A00116D00 /* Constants.swift in Sources */,
 				ADF6802228C00CD40072D524 /* TextFieldEditor.swift in Sources */,
+				AD816C0228CBB72D00CDEEE0 /* MockGenerator.swift in Sources */,
 				AD85DA5A28B98A8900694753 /* Message.swift in Sources */,
 				AD8321AD28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */,
 				AD8321B028B6FDC10020375A /* MessengerRepository.swift in Sources */,
@@ -333,6 +338,7 @@
 				AD85DA5828B98A4800694753 /* Contact.swift in Sources */,
 				AD4483A428BA078A00116D00 /* Constants.swift in Sources */,
 				ADF6802328C00CD40072D524 /* TextFieldEditor.swift in Sources */,
+				AD816C0328CBB72D00CDEEE0 /* MockGenerator.swift in Sources */,
 				AD85DA5B28B98A8900694753 /* Message.swift in Sources */,
 				AD8321AE28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */,
 				AD8321B128B6FDC10020375A /* MessengerRepository.swift in Sources */,
