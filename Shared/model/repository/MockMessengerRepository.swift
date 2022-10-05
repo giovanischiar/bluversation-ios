@@ -14,11 +14,17 @@ class MockMessengerRepository: MessengerRepository {
     private var messagesPerContact: [UUID: [Message]] = [:]
     private var remoteContact: Contact? = nil
     
-    private var messageSentCallback: ((Message) -> Void)?
+    private var messageSentCallback: ((Contact, Message) -> Void)?
     
     init() {
         contacts = mockGenerator.generateContacts()
         messagesPerContact = mockGenerator.generateMessagesPerContact()
+    }
+    
+    func lastMessageOfEachContact() -> [(Contact, Message)] {
+        return messagesPerContact.filter{$1.last != nil && contacts[$0] != nil}.map {
+            (contacts[$0]!, $1.last!)
+        }
     }
     
     func registerForContacts(callback: @escaping (_ contact: Contact) -> Void) {
@@ -27,11 +33,11 @@ class MockMessengerRepository: MessengerRepository {
         }
     }
     
-    func registerForMessages(callback: @escaping (_ message: Message) -> Void) {
+    func registerForMessages(callback: @escaping (_ contact: Contact, _ message: Message) -> Void) {
         messageSentCallback = callback
     }
     
-    func connectContact(with id: String, callback: @escaping (_ contact: Contact, _ messages: [Message]) -> Void) {
+    func connectContact(with id: String, callback: @escaping (Contact, [Message]) -> Void) {
         let uuid = UUID(uuidString: id) ?? UUID()
         guard let contact = contacts[uuid] else { return }
         remoteContact = contact
@@ -51,7 +57,7 @@ class MockMessengerRepository: MessengerRepository {
         messages.append(Message(sent: true, content: message))
         messagesPerContact[contact.id] = messages
         if let messageSentCallback = self.messageSentCallback {
-            messageSentCallback(messageSent)
+            messageSentCallback(contact, messageSent)
         }
     }
 }

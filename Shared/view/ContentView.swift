@@ -11,12 +11,13 @@ struct ContentView: View {
     @EnvironmentObject private var viewModel: MessengerViewModel
     
     var body: some View {
+        let messagesView = MessagesView()
         let contactsView = ContactsView()
         let conversationView = ConversationView()
 #if os(iOS)
         NavigationView {
             VStack {
-                contactsView
+                messagesView
                 NavigationLink(
                     destination: conversationView,
                     isActive: .constant(viewModel.remoteContact != nil)
@@ -25,7 +26,7 @@ struct ContentView: View {
         }
 #else
         NavigationView {
-            contactsView
+            messagesView
             conversationView
         }
 #endif

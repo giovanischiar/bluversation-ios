@@ -16,7 +16,7 @@ class BluetoothManager: NSObject {
     let peripheralPublisher = PassthroughSubject<CBPeripheral, Never>()
     let connectedPeripheralPublisher = PassthroughSubject<CBPeripheral, Never>()
     let disconnectedPeripheralPublisher = PassthroughSubject<CBPeripheral, Never>()
-    let messageReceivedPublisher = PassthroughSubject<String, Never>()
+    let messageReceivedPublisher = PassthroughSubject<(CBPeripheral, String), Never>()
     let messageSentPublisher = PassthroughSubject<String, Never>()
 
     private var peripheralsFound: [String: CBPeripheral] = [:]
@@ -81,8 +81,10 @@ extension BluetoothManager: CBPeripheralManagerDelegate {
                 //here is the message text that we receive, use it as you wish.
                 let messageText = String(data: value, encoding: String.Encoding.utf8) as String?
                 guard let message = messageText else { return }
-                messageReceivedPublisher.send(message)
                 print("message received!: \(messageText ?? "nil")")
+                guard let whoSent = peripheralsFound[request.central.identifier.uuidString] else { return }
+                messageReceivedPublisher.send((whoSent, message))
+                
             }
             self.peripheralManager.respond(to: request, withResult: .success)
         }

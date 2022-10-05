@@ -13,15 +13,14 @@ class MessengerViewModel: ObservableObject {
     @Published private(set) var contacts: Array<ContactViewData> = []
     @Published private(set) var clientContact: ContactViewData? = nil
     @Published private(set) var remoteContact: ContactViewData? = nil
-    @Published private(set) var currentMessages: [MessageViewData] = []
+    @Published private(set) var currentConversation: [MessageViewData] = []
+    @Published private(set) var messages: [(ContactViewData, MessageViewData)] = []
     
     init(messengerRepository: MessengerRepository = BluetoothMessengerRepository()) {
         self.messengerRepository = messengerRepository
-        registerForContacts()
-    }
-    
-    private func registerForContacts() {
         messengerRepository.registerForContacts(callback: addNewContact(contact:))
+        messengerRepository.registerForMessages(callback: receive(from:a:))
+        messages = messengerRepository.lastMessageOfEachContact().toViewData()
     }
     
     private func addNewContact(contact: Contact) {
@@ -46,12 +45,14 @@ class MessengerViewModel: ObservableObject {
     private func contactWasConnected(contact: Contact, messages: [Message]) {
         clientContact = nil
         remoteContact = contact.toViewData()
-        messengerRepository.registerForMessages(callback: receive(a:))
-        currentMessages = messages.toViewData()
+        currentConversation = messages.toViewData()
     }
     
-    private func receive(a message: Message) {
-        currentMessages.append(message.toViewData())
+    private func receive(from who: Contact, a message: Message) {
+        messages = messengerRepository.lastMessageOfEachContact().toViewData()
+        if (who.toViewData() == remoteContact) {
+            currentConversation.append(message.toViewData())
+        }
     }
     
     func disconnectRemoteContact() {

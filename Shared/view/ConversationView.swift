@@ -16,8 +16,8 @@ struct ConversationView: View {
         ScrollViewReader { scrollView in
             VStack {
                 ScrollView {
-                    ForEach(Array(viewModel.currentMessages.enumerated()), id: \.element) { index, message in
-                        let lastMessageDirection = viewModel.currentMessages.lastIndexDirection(index: index)
+                    ForEach(Array(viewModel.currentConversation.enumerated()), id: \.element) { index, message in
+                        let lastMessageDirection = viewModel.currentConversation.lastIndexDirection(index: index)
                         MessageBalloon(index: index, message: message, lastMessageDirection: lastMessageDirection)
                         Spacer().frame(
                             height: calculateMessageBalloonMargin(index: index, direction: message.direction)
@@ -25,7 +25,7 @@ struct ConversationView: View {
                     }.frame(maxWidth: .infinity)
                 }
                 .onAppear { scrollToBottom(scrollView) }
-                .onChange(of: viewModel.currentMessages.count) { _ in scrollToBottom(scrollView) }
+                .onChange(of: viewModel.currentConversation.count) { _ in scrollToBottom(scrollView) }
                 TextFieldSendEditor(message: $message, onSizeChange: { scrollToBottom(scrollView) }) {
                     viewModel.send(a: message)
                 }
@@ -51,12 +51,12 @@ struct ConversationView: View {
 
 extension ConversationView {
     func scrollToBottom(_ scrollView: ScrollViewProxy) {
-        guard let last = viewModel.currentMessages.last else { return }
+        guard let last = viewModel.currentConversation.last else { return }
         scrollView.scrollTo(last)
     }
     
     func calculateMessageBalloonMargin(index: Int, direction: Direction) -> CGFloat {
-        let currentMessages = viewModel.currentMessages
+        let currentMessages = viewModel.currentConversation
         if (index + 1 >= currentMessages.count) { return 0 }
         let nextMessageDirection = currentMessages[index + 1].direction
         if (nextMessageDirection == direction) { return Dimens.space_between_same_sender_messages }

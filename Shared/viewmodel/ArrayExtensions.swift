@@ -17,3 +17,9 @@ extension Array where Array.Element == MessageViewData {
         return self[index - 1].direction
     }
 }
+
+extension Array where Array.Element == (Contact, Message) {
+    func toViewData() -> [(ContactViewData, MessageViewData)] {
+        return map {($0.toViewData(), $1.toViewData())}
+    }
+}

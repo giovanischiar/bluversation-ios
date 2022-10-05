@@ -25,29 +25,16 @@ struct MessageBalloon: View {
     }
     
     var body: some View {
-        HStack() {
-            if (message.direction == .right) {
-                Spacer().frame(width: Dimens.message_balloon_end_margin)
-                Spacer()
-            } else {
-                Spacer().frame(width: Dimens.message_balloon_start_margin + Dimens.triangle_size)
-            }
-            Text(message.content)
-                .padding(.all, Dimens.message_balloon_padding)
-                .background(message.direction.toColor())
-                .cornerRadius(Dimens.message_balloon_border_radius)
-                .foregroundColor(Color(rgb: Colors.message_text_color))
-            if (message.direction == .left) {
-                Spacer().frame(width: Dimens.message_balloon_end_margin)
-                Spacer()
-            } else {
-                Spacer().frame(width: Dimens.message_balloon_start_margin + Dimens.triangle_size)
-            }
-        }
-        .addTriangle(
-            direction: message.direction,
-            lastMessageDirection: lastMessageDirection
-        )
+        Text(message.content)
+            .padding(.all, Dimens.message_balloon_padding)
+            .background(message.direction.toColor())
+            .cornerRadius(Dimens.message_balloon_border_radius)
+            .foregroundColor(Color(rgb: Colors.message_text_color))
+            .addSpacers(direction: message.direction)
+            .addTriangle(
+                direction: message.direction,
+                lastMessageDirection: lastMessageDirection
+            )
     }
 }
 
@@ -59,5 +46,23 @@ extension View {
             return AnyView(self.overlay(messageTriangleShape))
         }
         return AnyView(self)
+    }
+    
+    func addSpacers(direction: Direction) -> some View {
+        return HStack {
+            if (direction == .right) {
+                Spacer().frame(width: Dimens.message_balloon_end_margin)
+                Spacer()
+            } else {
+                Spacer().frame(width: Dimens.message_balloon_start_margin + Dimens.triangle_size)
+            }
+            self
+            if (direction == .left) {
+                Spacer().frame(width: Dimens.message_balloon_end_margin)
+                Spacer()
+            } else {
+                Spacer().frame(width: Dimens.message_balloon_start_margin + Dimens.triangle_size)
+            }
+        }
     }
 }
