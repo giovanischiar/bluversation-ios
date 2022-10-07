@@ -1,6 +1,6 @@
 //
 //  MockGenerator.swift
-//  repository
+//  mock
 //
 //  Created by Giovani Schiar on 09/09/22.
 //

@@ -16,11 +16,10 @@ class MessengerViewModel: ObservableObject {
     @Published private(set) var currentConversation: [MessageViewData] = []
     @Published private(set) var messages: [(ContactViewData, MessageViewData)] = []
     
-    init(messengerRepository: MessengerRepository = BluetoothMessengerRepository()) {
-        self.messengerRepository = messengerRepository
+    init(messengerTech: any MessengerTech = BluetoothMessengerTech()) {
+        messengerRepository = MessengerRepository(messengerTech: messengerTech)
         messengerRepository.registerForContacts(callback: addNewContact(contact:))
         messengerRepository.registerForMessages(callback: receive(from:a:))
-        messages = messengerRepository.lastMessageOfEachContact().toViewData()
     }
     
     private func addNewContact(contact: Contact) {

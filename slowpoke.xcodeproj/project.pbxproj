@@ -13,8 +13,8 @@
 		AD128E2528B0E4F000B004F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1328B0E4E800B004F2 /* ContentView.swift */; };
 		AD128E2628B0E4F000B004F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD128E1428B0E4F000B004F2 /* Assets.xcassets */; };
 		AD128E2728B0E4F000B004F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD128E1428B0E4F000B004F2 /* Assets.xcassets */; };
-		AD128E3228B15F1500B004F2 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* BluetoothManager.swift */; };
-		AD128E3328B15F1500B004F2 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* BluetoothManager.swift */; };
+		AD128E3228B15F1500B004F2 /* BluetoothMessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* BluetoothMessengerTech.swift */; };
+		AD128E3328B15F1500B004F2 /* BluetoothMessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* BluetoothMessengerTech.swift */; };
 		AD4483A328BA078A00116D00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4483A228BA078A00116D00 /* Constants.swift */; };
 		AD4483A428BA078A00116D00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4483A228BA078A00116D00 /* Constants.swift */; };
 		AD55801C28B997E90027A6FE /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55801B28B997E90027A6FE /* ArrayExtensions.swift */; };
@@ -23,12 +23,6 @@
 		AD5AFEF128E654F3006F026E /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5AFEEF28E654F3006F026E /* MessagesView.swift */; };
 		AD816C0228CBB72D00CDEEE0 /* MockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */; };
 		AD816C0328CBB72D00CDEEE0 /* MockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */; };
-		AD8321AD28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */; };
-		AD8321AE28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */; };
-		AD8321B028B6FDC10020375A /* MessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AF28B6FDC10020375A /* MessengerRepository.swift */; };
-		AD8321B128B6FDC10020375A /* MessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321AF28B6FDC10020375A /* MessengerRepository.swift */; };
-		AD8321B328B72BE90020375A /* MockMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321B228B72BE90020375A /* MockMessengerRepository.swift */; };
-		AD8321B428B72BE90020375A /* MockMessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8321B228B72BE90020375A /* MockMessengerRepository.swift */; };
 		AD85DA5728B98A4800694753 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD85DA5628B98A4800694753 /* Contact.swift */; };
 		AD85DA5828B98A4800694753 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD85DA5628B98A4800694753 /* Contact.swift */; };
 		AD85DA5A28B98A8900694753 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD85DA5928B98A8900694753 /* Message.swift */; };
@@ -53,6 +47,12 @@
 		ADACED4A28B436F60054E7BE /* ContactViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4828B436F60054E7BE /* ContactViewData.swift */; };
 		ADACED4C28B4494C0054E7BE /* MessengerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */; };
 		ADACED4D28B4494C0054E7BE /* MessengerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */; };
+		ADE73CAE28EF7A7A00746CF2 /* MessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CAD28EF7A7A00746CF2 /* MessengerRepository.swift */; };
+		ADE73CAF28EF7A7A00746CF2 /* MessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CAD28EF7A7A00746CF2 /* MessengerRepository.swift */; };
+		ADE73CB128EF7B3D00746CF2 /* MessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB028EF7B3D00746CF2 /* MessengerTech.swift */; };
+		ADE73CB228EF7B3D00746CF2 /* MessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB028EF7B3D00746CF2 /* MessengerTech.swift */; };
+		ADE73CB428EF7F4900746CF2 /* MockMessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB328EF7F4900746CF2 /* MockMessengerTech.swift */; };
+		ADE73CB528EF7F4900746CF2 /* MockMessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB328EF7F4900746CF2 /* MockMessengerTech.swift */; };
 		ADF6802228C00CD40072D524 /* TextFieldEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6802128C00CD40072D524 /* TextFieldEditor.swift */; };
 		ADF6802328C00CD40072D524 /* TextFieldEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6802128C00CD40072D524 /* TextFieldEditor.swift */; };
 /* End PBXBuildFile section */
@@ -65,14 +65,11 @@
 		AD128E1F28B0E4F000B004F2 /* slowpoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slowpoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD128E2128B0E4F000B004F2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		AD128E3028B0FDFC00B004F2 /* slowpoke--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "slowpoke--iOS--Info.plist"; sourceTree = "<group>"; };
-		AD128E3128B15F1500B004F2 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		AD128E3128B15F1500B004F2 /* BluetoothMessengerTech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothMessengerTech.swift; sourceTree = "<group>"; };
 		AD4483A228BA078A00116D00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AD55801B28B997E90027A6FE /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		AD5AFEEF28E654F3006F026E /* MessagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesView.swift; path = Shared/view/MessagesView.swift; sourceTree = SOURCE_ROOT; };
 		AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGenerator.swift; sourceTree = "<group>"; };
-		AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothMessengerRepository.swift; sourceTree = "<group>"; };
-		AD8321AF28B6FDC10020375A /* MessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerRepository.swift; sourceTree = "<group>"; };
-		AD8321B228B72BE90020375A /* MockMessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessengerRepository.swift; sourceTree = "<group>"; };
 		AD85DA5628B98A4800694753 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		AD85DA5928B98A8900694753 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		AD85DA5C28B98D6000694753 /* ModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
@@ -85,6 +82,9 @@
 		AD961D7128B4DC3800F27AA8 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		ADACED4828B436F60054E7BE /* ContactViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewData.swift; sourceTree = "<group>"; };
 		ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerViewModel.swift; sourceTree = "<group>"; };
+		ADE73CAD28EF7A7A00746CF2 /* MessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerRepository.swift; sourceTree = "<group>"; };
+		ADE73CB028EF7B3D00746CF2 /* MessengerTech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerTech.swift; sourceTree = "<group>"; };
+		ADE73CB328EF7F4900746CF2 /* MockMessengerTech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessengerTech.swift; sourceTree = "<group>"; };
 		ADF6802128C00CD40072D524 /* TextFieldEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,21 +110,22 @@
 			isa = PBXGroup;
 			children = (
 				AD128E3028B0FDFC00B004F2 /* slowpoke--iOS--Info.plist */,
-				AD128E1128B0E4E800B004F2 /* Shared */,
 				AD128E2028B0E4F000B004F2 /* macOS */,
 				AD128E1A28B0E4F000B004F2 /* Products */,
+				AD128E1128B0E4E800B004F2 /* Shared */,
 			);
 			sourceTree = "<group>";
 		};
 		AD128E1128B0E4E800B004F2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				AD8321AA28B6FBB60020375A /* model */,
-				AD8321A928B6FB610020375A /* viewmodel */,
-				AD8321A628B6FB070020375A /* view */,
-				AD128E1228B0E4E800B004F2 /* SlowpokeApp.swift */,
-				AD128E3128B15F1500B004F2 /* BluetoothManager.swift */,
 				AD128E1428B0E4F000B004F2 /* Assets.xcassets */,
+				AD128E1228B0E4E800B004F2 /* SlowpokeApp.swift */,
+				AD88F23028F0E2EE00811476 /* messenger */,
+				AD88F22F28F0DDD700811476 /* mock */,
+				AD8321AA28B6FBB60020375A /* model */,
+				AD8321A628B6FB070020375A /* view */,
+				AD8321A928B6FB610020375A /* viewmodel */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -194,12 +195,27 @@
 		AD8321AB28B6FBBF0020375A /* repository */ = {
 			isa = PBXGroup;
 			children = (
-				AD8321AC28B6FD6C0020375A /* BluetoothMessengerRepository.swift */,
-				AD8321AF28B6FDC10020375A /* MessengerRepository.swift */,
-				AD8321B228B72BE90020375A /* MockMessengerRepository.swift */,
-				AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */,
+				ADE73CAD28EF7A7A00746CF2 /* MessengerRepository.swift */,
 			);
 			path = repository;
+			sourceTree = "<group>";
+		};
+		AD88F22F28F0DDD700811476 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
+		AD88F23028F0E2EE00811476 /* messenger */ = {
+			isa = PBXGroup;
+			children = (
+				AD128E3128B15F1500B004F2 /* BluetoothMessengerTech.swift */,
+				ADE73CB028EF7B3D00746CF2 /* MessengerTech.swift */,
+				ADE73CB328EF7F4900746CF2 /* MockMessengerTech.swift */,
+			);
+			path = messenger;
 			sourceTree = "<group>";
 		};
 		AD8C1EBC28BEDEA100A40CB4 /* components */ = {
@@ -315,10 +331,7 @@
 				ADF6802228C00CD40072D524 /* TextFieldEditor.swift in Sources */,
 				AD816C0228CBB72D00CDEEE0 /* MockGenerator.swift in Sources */,
 				AD85DA5A28B98A8900694753 /* Message.swift in Sources */,
-				AD8321AD28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */,
-				AD8321B028B6FDC10020375A /* MessengerRepository.swift in Sources */,
 				AD8C1EC128BEDF1700A40CB4 /* MessageTriangleShape.swift in Sources */,
-				AD8321B328B72BE90020375A /* MockMessengerRepository.swift in Sources */,
 				AD943B8F28B6B33D0070D440 /* ViewExtensions.swift in Sources */,
 				AD961D7228B4DC3800F27AA8 /* ContactsView.swift in Sources */,
 				ADACED4928B436F60054E7BE /* ContactViewData.swift in Sources */,
@@ -326,9 +339,12 @@
 				AD961D6F28B4DA5000F27AA8 /* ConversationView.swift in Sources */,
 				AD943B8C28B5E3F10070D440 /* MessageViewData.swift in Sources */,
 				ADACED4C28B4494C0054E7BE /* MessengerViewModel.swift in Sources */,
-				AD128E3228B15F1500B004F2 /* BluetoothManager.swift in Sources */,
+				AD128E3228B15F1500B004F2 /* BluetoothMessengerTech.swift in Sources */,
+				ADE73CB428EF7F4900746CF2 /* MockMessengerTech.swift in Sources */,
 				AD8C1EBE28BEDEDF00A40CB4 /* MessageBalloon.swift in Sources */,
 				AD85DA5D28B98D6000694753 /* ModelExtensions.swift in Sources */,
+				ADE73CAE28EF7A7A00746CF2 /* MessengerRepository.swift in Sources */,
+				ADE73CB128EF7B3D00746CF2 /* MessengerTech.swift in Sources */,
 				AD128E2228B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
 				AD5AFEF028E654F3006F026E /* MessagesView.swift in Sources */,
 				AD55801C28B997E90027A6FE /* ArrayExtensions.swift in Sources */,
@@ -345,10 +361,7 @@
 				ADF6802328C00CD40072D524 /* TextFieldEditor.swift in Sources */,
 				AD816C0328CBB72D00CDEEE0 /* MockGenerator.swift in Sources */,
 				AD85DA5B28B98A8900694753 /* Message.swift in Sources */,
-				AD8321AE28B6FD6C0020375A /* BluetoothMessengerRepository.swift in Sources */,
-				AD8321B128B6FDC10020375A /* MessengerRepository.swift in Sources */,
 				AD8C1EC228BEDF1700A40CB4 /* MessageTriangleShape.swift in Sources */,
-				AD8321B428B72BE90020375A /* MockMessengerRepository.swift in Sources */,
 				AD943B9028B6B33D0070D440 /* ViewExtensions.swift in Sources */,
 				AD961D7328B4DC3800F27AA8 /* ContactsView.swift in Sources */,
 				ADACED4A28B436F60054E7BE /* ContactViewData.swift in Sources */,
@@ -356,9 +369,12 @@
 				AD961D7028B4DA5000F27AA8 /* ConversationView.swift in Sources */,
 				AD943B8D28B5E3F10070D440 /* MessageViewData.swift in Sources */,
 				ADACED4D28B4494C0054E7BE /* MessengerViewModel.swift in Sources */,
-				AD128E3328B15F1500B004F2 /* BluetoothManager.swift in Sources */,
+				AD128E3328B15F1500B004F2 /* BluetoothMessengerTech.swift in Sources */,
+				ADE73CB528EF7F4900746CF2 /* MockMessengerTech.swift in Sources */,
 				AD8C1EBF28BEDEDF00A40CB4 /* MessageBalloon.swift in Sources */,
 				AD85DA5E28B98D6000694753 /* ModelExtensions.swift in Sources */,
+				ADE73CAF28EF7A7A00746CF2 /* MessengerRepository.swift in Sources */,
+				ADE73CB228EF7B3D00746CF2 /* MessengerTech.swift in Sources */,
 				AD128E2328B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
 				AD5AFEF128E654F3006F026E /* MessagesView.swift in Sources */,
 				AD55801D28B997E90027A6FE /* ArrayExtensions.swift in Sources */,
