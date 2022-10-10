@@ -33,12 +33,14 @@ class MessengerRepository {
     }
     
     func registerForMessages(callback: @escaping (Contact, Message) -> Void) {
-        messengerTech.messagesPublisher.sink { (contact, message) in
-            let id = contact.id
-            var messages = self.messagesPerContact[id] ?? []
-            messages.append(message)
-            self.messagesPerContact[id] = messages
-            callback(contact, message)
+        messengerTech.messagesPublisher.sink { messages in
+            messages.forEach { (contact, message) in
+                let id = contact.id
+                var messages = self.messagesPerContact[id] ?? []
+                messages.append(message)
+                self.messagesPerContact[id] = messages
+                callback(contact, message)
+            }
         }.store(in: &cancellables)
     }
     

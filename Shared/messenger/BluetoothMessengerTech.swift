@@ -43,8 +43,8 @@ class BluetoothMessengerTech: NSObject, MessengerTech {
         disconnectedPeripheralPassthroughSubject.eraseToAnyPublisher()
     }
     
-    private var messagesPassthroughSubject = PassthroughSubject<(Contact, Message), Never>()
-    var messagesPublisher: AnyPublisher<(Contact, Message), Never> {
+    private var messagesPassthroughSubject = PassthroughSubject<[(Contact, Message)], Never>()
+    var messagesPublisher: AnyPublisher<[(Contact, Message)], Never> {
         messagesPassthroughSubject.eraseToAnyPublisher()
     }
     
@@ -78,7 +78,7 @@ class BluetoothMessengerTech: NSObject, MessengerTech {
         guard let characteristic = characteriticOfConnectedPeripheral else { return }
         guard let peripheral = connectedPeripheral else { return }
         let data = message.data(using: .utf8)
-        messagesPassthroughSubject.send((peripheral.toContact(), Message(sent: true, content: message)))
+        messagesPassthroughSubject.send([(peripheral.toContact(), Message(sent: true, content: message))])
         peripheral.writeValue(data!, for: characteristic, type: CBCharacteristicWriteType.withResponse)
     }
 }
@@ -110,7 +110,7 @@ extension BluetoothMessengerTech: CBPeripheralManagerDelegate {
                 guard let message = messageText else { return }
                 print("message received!: \(messageText ?? "nil")")
                 guard let whoSent = peripheralsFound[request.central.identifier.uuidString] else { return }
-                messagesPassthroughSubject.send((whoSent.toContact(), Message(sent: false, content: message)))
+                messagesPassthroughSubject.send([(whoSent.toContact(), Message(sent: false, content: message))])
                 
             }
             self.peripheralManager.respond(to: request, withResult: .success)

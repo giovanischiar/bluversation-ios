@@ -34,16 +34,16 @@ class MockMessengerTech: MessengerTech {
         disconnectedPassthroughSubject.eraseToAnyPublisher()
     }
     
-    private var messagesCurrentValueSubject: Publishers.Sequence<[(Contact, Message)], Never>
-    var messagesPublisher: AnyPublisher<(Contact, Message), Never> {
+    private var messagesCurrentValueSubject: CurrentValueSubject<[(Contact, Message)], Never>
+    var messagesPublisher: AnyPublisher<[(Contact, Message)], Never> {
         messagesCurrentValueSubject.eraseToAnyPublisher()
     }
     
     init() {
         contactsDict = mockGenerator.generateContacts()
         messagesPerContactID = mockGenerator.generateMessagesPerContact()
-        messagesCurrentValueSubject = contactsDict.toValuesArray().generateSequenceOfMessages(
-            messagesPerContactID: messagesPerContactID
+        messagesCurrentValueSubject = CurrentValueSubject(
+            contactsDict.toValuesArray().generateMessages(messagesPerContactID: messagesPerContactID)
         )
     }
     
@@ -64,7 +64,7 @@ class MockMessengerTech: MessengerTech {
         var messages = messagesPerContactID[contact.id] ?? []
         let messageSent = Message(sent: true, content: message)
         messages.append(messageSent)
-        //messagesCurrentValueSubject.send((contact, messageSent))
+        messagesCurrentValueSubject.send([(contact, messageSent)])
     }
 }
 
@@ -75,13 +75,13 @@ extension [UUID : Contact] {
 }
 
 extension [Contact] {
-    func generateSequenceOfMessages(messagesPerContactID: [UUID: [Message]]) -> Publishers.Sequence<[(Contact, Message)], Never> {
+    func generateMessages(messagesPerContactID: [UUID: [Message]]) -> [(Contact, Message)] {
         var messages: [(Contact, Message)] = []
         self.forEach { contact in
             let messagesFromParticularContactID = messagesPerContactID[contact.id] ?? []
             messagesFromParticularContactID.forEach { message in messages.append((contact, message)) }
         }
         
-        return Publishers.Sequence<[(Contact, Message)], Never>(sequence: messages)
+        return messages
     }
 }
