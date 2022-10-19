@@ -18,9 +18,11 @@ struct ContactsView: View {
                 Spacer()
                 generateConnectDisconnectButton(for: contact)
             }
+#if os(iOS)
             .alert(isPresented: .constant(viewModel.clientContact != nil)) {
                 generateConnectDisconnectAlert()
             }
+#endif
         }
         .listStyle(PlainListStyle())
         .alert(isPresented: $isConfirmDisconnectAlertShowing) {

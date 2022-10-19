@@ -15,6 +15,7 @@ class MessengerViewModel: ObservableObject {
     @Published private(set) var remoteContact: ContactViewData? = nil
     @Published private(set) var currentConversation: [MessageViewData] = []
     @Published private(set) var messages: [(ContactViewData, MessageViewData)] = []
+    @Published var showContactsList = false
     
     init(messengerTech: any MessengerTech = BluetoothMessengerTech()) {
         messengerRepository = MessengerRepository(messengerTech: messengerTech)
@@ -45,6 +46,7 @@ class MessengerViewModel: ObservableObject {
         clientContact = nil
         remoteContact = contact.toViewData()
         currentConversation = messages.toViewData()
+        showContactsList = false
     }
     
     private func receive(from who: Contact, a message: Message) {

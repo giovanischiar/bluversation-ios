@@ -12,7 +12,6 @@ struct ContentView: View {
     
     var body: some View {
         let messagesView = MessagesView()
-        let contactsView = ContactsView()
         let conversationView = ConversationView()
 #if os(iOS)
         NavigationView {

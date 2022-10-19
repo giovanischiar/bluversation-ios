@@ -10,6 +10,7 @@ import SwiftUI
 struct MessagesView: View {
     @EnvironmentObject private var viewModel: MessengerViewModel
     @State private var isConfirmDisconnectAlertShowing = false
+    @State private var showingPopup = false
    
     var body: some View {
         List(viewModel.messages, id: \(ContactViewData, MessageViewData).0.id) { contact, message in
@@ -28,8 +29,13 @@ struct MessagesView: View {
             generateDisconnectAlert()
         }
         .navigationTitle("Messages")
+        .toolbar {
+            Button(action: { viewModel.showContactsList = true } ) {
+                Image(systemName: "square.and.pencil").renderingMode(.original)
+            }
+        }
+        .popover(isPresented: $viewModel.showContactsList) { ContactsView() }
     }
-
 }
 
 struct ListItem: View {
