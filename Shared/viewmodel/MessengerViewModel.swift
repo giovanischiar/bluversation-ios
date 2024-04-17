@@ -19,8 +19,12 @@ class MessengerViewModel: ObservableObject {
     @Published private(set) var messages: [(ContactViewData, MessageViewData)] = []
     @Published var showContactsList = false
     
-    init(messengerTech: any MessengerTech = BluetoothMessengerTech()) {
-        messengerRepository = MessengerRepository(messengerTech: messengerTech)
+    init(messengerRepository: MessengerRepository) {
+        self.messengerRepository = messengerRepository
+        registerForNewMessagesAndContacts()
+    }
+    
+    private func registerForNewMessagesAndContacts() {
         messengerRepository
             .contactsPublisher
             .sink { contact in self.addNewContact(contact: contact) }

@@ -1,6 +1,6 @@
 //
 //  MessageBalloon.swift
-//  components
+//  view.conversation.component
 //
 //  Created by Giovani Schiar on 30/08/22.
 //

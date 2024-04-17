@@ -1,6 +1,6 @@
 //
 //  ContactViewData.swift
-//  viewdata
+//  view.shared.viewdata
 //
 //  Created by Giovani Schiar on 22/08/22.
 //

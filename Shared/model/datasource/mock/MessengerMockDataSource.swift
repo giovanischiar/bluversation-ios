@@ -1,6 +1,6 @@
 //
-//  MockMessengerTech.swift
-//  messenger
+//  MessengerMockDataSource.swift
+//  model.datasource.mock
 //
 //  Created by Giovani Schiar on 06/10/22.
 //
@@ -12,7 +12,7 @@ import class Combine.PassthroughSubject
 import class Combine.CurrentValueSubject
 import enum Combine.Publishers
 
-class MockMessengerTech: MessengerTech {
+class MessengerMockDataSource: MessengerDataSource {
     private let mockGenerator = MockGenerator()
     private var contactsDict: [UUID: Contact]
     private var remoteContact: Contact? = nil

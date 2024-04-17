@@ -1,13 +1,13 @@
 //
 //  ConversationView.swift
-//  view
+//  view.conversation
 //
 //  Created by Giovani Schiar on 23/08/22.
 //
 
 import SwiftUI
 
-struct ConversationView: View {
+struct ConversationScreen: View {
     @EnvironmentObject private var viewModel: MessengerViewModel
     @State private var message = ""
     @State private var confirmBackShowing = false
@@ -49,7 +49,7 @@ struct ConversationView: View {
     }
 }
 
-extension ConversationView {
+extension ConversationScreen {
     func scrollToBottom(_ scrollView: ScrollViewProxy) {
         guard let last = viewModel.currentConversation.last else { return }
         scrollView.scrollTo(last)

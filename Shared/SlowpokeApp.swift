@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct SlowpokeApp: App {
-    @ObservedObject private var viewModel = MessengerViewModel()
+    @ObservedObject private var viewModel = MessengerViewModel(
+        messengerRepository: MessengerRepository(
+            messengerDataSource: MessengerBluetoothDataSource()
+        )
+    )
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen()
                 .environmentObject(viewModel)
         }
     }

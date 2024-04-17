@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		AD128E2228B0E4F000B004F2 /* SlowpokeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1228B0E4E800B004F2 /* SlowpokeApp.swift */; };
 		AD128E2328B0E4F000B004F2 /* SlowpokeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1228B0E4E800B004F2 /* SlowpokeApp.swift */; };
-		AD128E2428B0E4F000B004F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1328B0E4E800B004F2 /* ContentView.swift */; };
-		AD128E2528B0E4F000B004F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1328B0E4E800B004F2 /* ContentView.swift */; };
+		AD128E2428B0E4F000B004F2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1328B0E4E800B004F2 /* HomeScreen.swift */; };
+		AD128E2528B0E4F000B004F2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1328B0E4E800B004F2 /* HomeScreen.swift */; };
 		AD128E2628B0E4F000B004F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD128E1428B0E4F000B004F2 /* Assets.xcassets */; };
 		AD128E2728B0E4F000B004F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD128E1428B0E4F000B004F2 /* Assets.xcassets */; };
-		AD128E3228B15F1500B004F2 /* BluetoothMessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* BluetoothMessengerTech.swift */; };
-		AD128E3328B15F1500B004F2 /* BluetoothMessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* BluetoothMessengerTech.swift */; };
+		AD128E3228B15F1500B004F2 /* MessengerBluetoothDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* MessengerBluetoothDataSource.swift */; };
+		AD128E3328B15F1500B004F2 /* MessengerBluetoothDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* MessengerBluetoothDataSource.swift */; };
 		AD4483A328BA078A00116D00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4483A228BA078A00116D00 /* Constants.swift */; };
 		AD4483A428BA078A00116D00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4483A228BA078A00116D00 /* Constants.swift */; };
 		AD55801C28B997E90027A6FE /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55801B28B997E90027A6FE /* ArrayExtensions.swift */; };
 		AD55801D28B997E90027A6FE /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55801B28B997E90027A6FE /* ArrayExtensions.swift */; };
-		AD5AFEF028E654F3006F026E /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5AFEEF28E654F3006F026E /* MessagesView.swift */; };
-		AD5AFEF128E654F3006F026E /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5AFEEF28E654F3006F026E /* MessagesView.swift */; };
+		AD5AFEF028E654F3006F026E /* MessagesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5AFEEF28E654F3006F026E /* MessagesScreen.swift */; };
+		AD5AFEF128E654F3006F026E /* MessagesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5AFEEF28E654F3006F026E /* MessagesScreen.swift */; };
 		AD816C0228CBB72D00CDEEE0 /* MockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */; };
 		AD816C0328CBB72D00CDEEE0 /* MockGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */; };
 		AD85DA5728B98A4800694753 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD85DA5628B98A4800694753 /* Contact.swift */; };
@@ -39,36 +39,38 @@
 		AD943B8D28B5E3F10070D440 /* MessageViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8B28B5E3F10070D440 /* MessageViewData.swift */; };
 		AD943B8F28B6B33D0070D440 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8E28B6B33D0070D440 /* ViewExtensions.swift */; };
 		AD943B9028B6B33D0070D440 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD943B8E28B6B33D0070D440 /* ViewExtensions.swift */; };
-		AD961D6F28B4DA5000F27AA8 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */; };
-		AD961D7028B4DA5000F27AA8 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */; };
-		AD961D7228B4DC3800F27AA8 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D7128B4DC3800F27AA8 /* ContactsView.swift */; };
-		AD961D7328B4DC3800F27AA8 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D7128B4DC3800F27AA8 /* ContactsView.swift */; };
+		AD961D6F28B4DA5000F27AA8 /* ConversationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6E28B4DA5000F27AA8 /* ConversationScreen.swift */; };
+		AD961D7028B4DA5000F27AA8 /* ConversationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D6E28B4DA5000F27AA8 /* ConversationScreen.swift */; };
+		AD961D7228B4DC3800F27AA8 /* ContactsDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D7128B4DC3800F27AA8 /* ContactsDialog.swift */; };
+		AD961D7328B4DC3800F27AA8 /* ContactsDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D7128B4DC3800F27AA8 /* ContactsDialog.swift */; };
 		ADACED4928B436F60054E7BE /* ContactViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4828B436F60054E7BE /* ContactViewData.swift */; };
 		ADACED4A28B436F60054E7BE /* ContactViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4828B436F60054E7BE /* ContactViewData.swift */; };
 		ADACED4C28B4494C0054E7BE /* MessengerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */; };
 		ADACED4D28B4494C0054E7BE /* MessengerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */; };
+		ADCCC24F2BD07A5C00F4A98C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCCC24E2BD07A5C00F4A98C /* MessageView.swift */; };
+		ADCCC2502BD07A5C00F4A98C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCCC24E2BD07A5C00F4A98C /* MessageView.swift */; };
 		ADE73CAE28EF7A7A00746CF2 /* MessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CAD28EF7A7A00746CF2 /* MessengerRepository.swift */; };
 		ADE73CAF28EF7A7A00746CF2 /* MessengerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CAD28EF7A7A00746CF2 /* MessengerRepository.swift */; };
-		ADE73CB128EF7B3D00746CF2 /* MessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB028EF7B3D00746CF2 /* MessengerTech.swift */; };
-		ADE73CB228EF7B3D00746CF2 /* MessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB028EF7B3D00746CF2 /* MessengerTech.swift */; };
-		ADE73CB428EF7F4900746CF2 /* MockMessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB328EF7F4900746CF2 /* MockMessengerTech.swift */; };
-		ADE73CB528EF7F4900746CF2 /* MockMessengerTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB328EF7F4900746CF2 /* MockMessengerTech.swift */; };
+		ADE73CB128EF7B3D00746CF2 /* MessengerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB028EF7B3D00746CF2 /* MessengerDataSource.swift */; };
+		ADE73CB228EF7B3D00746CF2 /* MessengerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB028EF7B3D00746CF2 /* MessengerDataSource.swift */; };
+		ADE73CB428EF7F4900746CF2 /* MessengerMockDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB328EF7F4900746CF2 /* MessengerMockDataSource.swift */; };
+		ADE73CB528EF7F4900746CF2 /* MessengerMockDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB328EF7F4900746CF2 /* MessengerMockDataSource.swift */; };
 		ADF6802228C00CD40072D524 /* TextFieldEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6802128C00CD40072D524 /* TextFieldEditor.swift */; };
 		ADF6802328C00CD40072D524 /* TextFieldEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6802128C00CD40072D524 /* TextFieldEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD128E1228B0E4E800B004F2 /* SlowpokeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowpokeApp.swift; sourceTree = "<group>"; };
-		AD128E1328B0E4E800B004F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AD128E1328B0E4E800B004F2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		AD128E1428B0E4F000B004F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD128E1928B0E4F000B004F2 /* slowpoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slowpoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD128E1F28B0E4F000B004F2 /* slowpoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slowpoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD128E2128B0E4F000B004F2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		AD128E3028B0FDFC00B004F2 /* slowpoke--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "slowpoke--iOS--Info.plist"; sourceTree = "<group>"; };
-		AD128E3128B15F1500B004F2 /* BluetoothMessengerTech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothMessengerTech.swift; sourceTree = "<group>"; };
+		AD128E3128B15F1500B004F2 /* MessengerBluetoothDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerBluetoothDataSource.swift; sourceTree = "<group>"; };
 		AD4483A228BA078A00116D00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AD55801B28B997E90027A6FE /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
-		AD5AFEEF28E654F3006F026E /* MessagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesView.swift; path = Shared/view/MessagesView.swift; sourceTree = SOURCE_ROOT; };
+		AD5AFEEF28E654F3006F026E /* MessagesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesScreen.swift; path = Shared/view/messages/MessagesScreen.swift; sourceTree = SOURCE_ROOT; };
 		AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGenerator.swift; sourceTree = "<group>"; };
 		AD85DA5628B98A4800694753 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		AD85DA5928B98A8900694753 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -78,13 +80,14 @@
 		AD8C1EC028BEDF1700A40CB4 /* MessageTriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTriangleShape.swift; sourceTree = "<group>"; };
 		AD943B8B28B5E3F10070D440 /* MessageViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewData.swift; sourceTree = "<group>"; };
 		AD943B8E28B6B33D0070D440 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
-		AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
-		AD961D7128B4DC3800F27AA8 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		AD961D6E28B4DA5000F27AA8 /* ConversationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationScreen.swift; sourceTree = "<group>"; };
+		AD961D7128B4DC3800F27AA8 /* ContactsDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDialog.swift; sourceTree = "<group>"; };
 		ADACED4828B436F60054E7BE /* ContactViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewData.swift; sourceTree = "<group>"; };
 		ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerViewModel.swift; sourceTree = "<group>"; };
+		ADCCC24E2BD07A5C00F4A98C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		ADE73CAD28EF7A7A00746CF2 /* MessengerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerRepository.swift; sourceTree = "<group>"; };
-		ADE73CB028EF7B3D00746CF2 /* MessengerTech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerTech.swift; sourceTree = "<group>"; };
-		ADE73CB328EF7F4900746CF2 /* MockMessengerTech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessengerTech.swift; sourceTree = "<group>"; };
+		ADE73CB028EF7B3D00746CF2 /* MessengerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerDataSource.swift; sourceTree = "<group>"; };
+		ADE73CB328EF7F4900746CF2 /* MessengerMockDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerMockDataSource.swift; sourceTree = "<group>"; };
 		ADF6802128C00CD40072D524 /* TextFieldEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,8 +124,7 @@
 			children = (
 				AD128E1428B0E4F000B004F2 /* Assets.xcassets */,
 				AD128E1228B0E4E800B004F2 /* SlowpokeApp.swift */,
-				AD88F23028F0E2EE00811476 /* messenger */,
-				AD88F22F28F0DDD700811476 /* mock */,
+				AD55E4E42BD07EC800CA9B78 /* library */,
 				AD8321AA28B6FBB60020375A /* model */,
 				AD8321A628B6FB070020375A /* view */,
 				AD8321A928B6FB610020375A /* viewmodel */,
@@ -147,17 +149,47 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		AD55E4E42BD07EC800CA9B78 /* library */ = {
+			isa = PBXGroup;
+			children = (
+				AD88F22F28F0DDD700811476 /* util */,
+				AD55E4E52BD07EDA00CA9B78 /* bluetooth */,
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
+		AD55E4E52BD07EDA00CA9B78 /* bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				AD128E3128B15F1500B004F2 /* MessengerBluetoothDataSource.swift */,
+			);
+			path = bluetooth;
+			sourceTree = "<group>";
+		};
+		AD55E4E62BD07EF900CA9B78 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				ADE73CB328EF7F4900746CF2 /* MessengerMockDataSource.swift */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
+		AD55E4E72BD07F5100CA9B78 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				AD85DA5C28B98D6000694753 /* ModelExtensions.swift */,
+				AD55801B28B997E90027A6FE /* ArrayExtensions.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		AD8321A628B6FB070020375A /* view */ = {
 			isa = PBXGroup;
 			children = (
-				AD8C1EBC28BEDEA100A40CB4 /* components */,
-				AD8321A728B6FB190020375A /* viewdata */,
-				AD961D6E28B4DA5000F27AA8 /* ConversationView.swift */,
-				AD961D7128B4DC3800F27AA8 /* ContactsView.swift */,
-				AD128E1328B0E4E800B004F2 /* ContentView.swift */,
-				AD5AFEEF28E654F3006F026E /* MessagesView.swift */,
-				AD943B8E28B6B33D0070D440 /* ViewExtensions.swift */,
-				AD4483A228BA078A00116D00 /* Constants.swift */,
+				ADCCC2522BD07C8500F4A98C /* shared */,
+				ADCCC2512BD07C7200F4A98C /* home */,
+				ADCCC24B2BD0799200F4A98C /* conversation */,
+				ADCCC2492BD0797900F4A98C /* messages */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -175,9 +207,8 @@
 		AD8321A928B6FB610020375A /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
-				AD55801B28B997E90027A6FE /* ArrayExtensions.swift */,
+				AD55E4E72BD07F5100CA9B78 /* util */,
 				ADACED4B28B4494C0054E7BE /* MessengerViewModel.swift */,
-				AD85DA5C28B98D6000694753 /* ModelExtensions.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -185,6 +216,7 @@
 		AD8321AA28B6FBB60020375A /* model */ = {
 			isa = PBXGroup;
 			children = (
+				ADCCC2482BD0778000F4A98C /* datasource */,
 				AD8321AB28B6FBBF0020375A /* repository */,
 				AD85DA5628B98A4800694753 /* Contact.swift */,
 				AD85DA5928B98A8900694753 /* Message.swift */,
@@ -200,32 +232,84 @@
 			path = repository;
 			sourceTree = "<group>";
 		};
-		AD88F22F28F0DDD700811476 /* mock */ = {
+		AD88F22F28F0DDD700811476 /* util */ = {
 			isa = PBXGroup;
 			children = (
 				AD816C0128CBB72D00CDEEE0 /* MockGenerator.swift */,
 			);
-			path = mock;
+			path = util;
 			sourceTree = "<group>";
 		};
-		AD88F23028F0E2EE00811476 /* messenger */ = {
-			isa = PBXGroup;
-			children = (
-				AD128E3128B15F1500B004F2 /* BluetoothMessengerTech.swift */,
-				ADE73CB028EF7B3D00746CF2 /* MessengerTech.swift */,
-				ADE73CB328EF7F4900746CF2 /* MockMessengerTech.swift */,
-			);
-			path = messenger;
-			sourceTree = "<group>";
-		};
-		AD8C1EBC28BEDEA100A40CB4 /* components */ = {
+		AD8C1EBC28BEDEA100A40CB4 /* component */ = {
 			isa = PBXGroup;
 			children = (
 				AD8C1EBD28BEDEDF00A40CB4 /* MessageBalloon.swift */,
 				AD8C1EC028BEDF1700A40CB4 /* MessageTriangleShape.swift */,
 				ADF6802128C00CD40072D524 /* TextFieldEditor.swift */,
 			);
-			path = components;
+			path = component;
+			sourceTree = "<group>";
+		};
+		ADCCC2482BD0778000F4A98C /* datasource */ = {
+			isa = PBXGroup;
+			children = (
+				AD55E4E62BD07EF900CA9B78 /* mock */,
+				ADE73CB028EF7B3D00746CF2 /* MessengerDataSource.swift */,
+			);
+			path = datasource;
+			sourceTree = "<group>";
+		};
+		ADCCC2492BD0797900F4A98C /* messages */ = {
+			isa = PBXGroup;
+			children = (
+				ADCCC24D2BD07A4300F4A98C /* component */,
+				AD5AFEEF28E654F3006F026E /* MessagesScreen.swift */,
+			);
+			path = messages;
+			sourceTree = "<group>";
+		};
+		ADCCC24B2BD0799200F4A98C /* conversation */ = {
+			isa = PBXGroup;
+			children = (
+				AD8C1EBC28BEDEA100A40CB4 /* component */,
+				AD961D6E28B4DA5000F27AA8 /* ConversationScreen.swift */,
+			);
+			path = conversation;
+			sourceTree = "<group>";
+		};
+		ADCCC24C2BD079C700F4A98C /* util */ = {
+			isa = PBXGroup;
+			children = (
+				AD943B8E28B6B33D0070D440 /* ViewExtensions.swift */,
+				AD4483A228BA078A00116D00 /* Constants.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		ADCCC24D2BD07A4300F4A98C /* component */ = {
+			isa = PBXGroup;
+			children = (
+				AD961D7128B4DC3800F27AA8 /* ContactsDialog.swift */,
+				ADCCC24E2BD07A5C00F4A98C /* MessageView.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		ADCCC2512BD07C7200F4A98C /* home */ = {
+			isa = PBXGroup;
+			children = (
+				AD128E1328B0E4E800B004F2 /* HomeScreen.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		ADCCC2522BD07C8500F4A98C /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				AD8321A728B6FB190020375A /* viewdata */,
+				ADCCC24C2BD079C700F4A98C /* util */,
+			);
+			path = shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,20 +417,21 @@
 				AD85DA5A28B98A8900694753 /* Message.swift in Sources */,
 				AD8C1EC128BEDF1700A40CB4 /* MessageTriangleShape.swift in Sources */,
 				AD943B8F28B6B33D0070D440 /* ViewExtensions.swift in Sources */,
-				AD961D7228B4DC3800F27AA8 /* ContactsView.swift in Sources */,
+				AD961D7228B4DC3800F27AA8 /* ContactsDialog.swift in Sources */,
 				ADACED4928B436F60054E7BE /* ContactViewData.swift in Sources */,
-				AD128E2428B0E4F000B004F2 /* ContentView.swift in Sources */,
-				AD961D6F28B4DA5000F27AA8 /* ConversationView.swift in Sources */,
+				AD128E2428B0E4F000B004F2 /* HomeScreen.swift in Sources */,
+				AD961D6F28B4DA5000F27AA8 /* ConversationScreen.swift in Sources */,
 				AD943B8C28B5E3F10070D440 /* MessageViewData.swift in Sources */,
+				ADCCC24F2BD07A5C00F4A98C /* MessageView.swift in Sources */,
 				ADACED4C28B4494C0054E7BE /* MessengerViewModel.swift in Sources */,
-				AD128E3228B15F1500B004F2 /* BluetoothMessengerTech.swift in Sources */,
-				ADE73CB428EF7F4900746CF2 /* MockMessengerTech.swift in Sources */,
+				AD128E3228B15F1500B004F2 /* MessengerBluetoothDataSource.swift in Sources */,
+				ADE73CB428EF7F4900746CF2 /* MessengerMockDataSource.swift in Sources */,
 				AD8C1EBE28BEDEDF00A40CB4 /* MessageBalloon.swift in Sources */,
 				AD85DA5D28B98D6000694753 /* ModelExtensions.swift in Sources */,
 				ADE73CAE28EF7A7A00746CF2 /* MessengerRepository.swift in Sources */,
-				ADE73CB128EF7B3D00746CF2 /* MessengerTech.swift in Sources */,
+				ADE73CB128EF7B3D00746CF2 /* MessengerDataSource.swift in Sources */,
 				AD128E2228B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
-				AD5AFEF028E654F3006F026E /* MessagesView.swift in Sources */,
+				AD5AFEF028E654F3006F026E /* MessagesScreen.swift in Sources */,
 				AD55801C28B997E90027A6FE /* ArrayExtensions.swift in Sources */,
 				AD8C1EBA28BEC00C00A40CB4 /* Direction.swift in Sources */,
 			);
@@ -363,20 +448,21 @@
 				AD85DA5B28B98A8900694753 /* Message.swift in Sources */,
 				AD8C1EC228BEDF1700A40CB4 /* MessageTriangleShape.swift in Sources */,
 				AD943B9028B6B33D0070D440 /* ViewExtensions.swift in Sources */,
-				AD961D7328B4DC3800F27AA8 /* ContactsView.swift in Sources */,
+				AD961D7328B4DC3800F27AA8 /* ContactsDialog.swift in Sources */,
 				ADACED4A28B436F60054E7BE /* ContactViewData.swift in Sources */,
-				AD128E2528B0E4F000B004F2 /* ContentView.swift in Sources */,
-				AD961D7028B4DA5000F27AA8 /* ConversationView.swift in Sources */,
+				AD128E2528B0E4F000B004F2 /* HomeScreen.swift in Sources */,
+				AD961D7028B4DA5000F27AA8 /* ConversationScreen.swift in Sources */,
 				AD943B8D28B5E3F10070D440 /* MessageViewData.swift in Sources */,
+				ADCCC2502BD07A5C00F4A98C /* MessageView.swift in Sources */,
 				ADACED4D28B4494C0054E7BE /* MessengerViewModel.swift in Sources */,
-				AD128E3328B15F1500B004F2 /* BluetoothMessengerTech.swift in Sources */,
-				ADE73CB528EF7F4900746CF2 /* MockMessengerTech.swift in Sources */,
+				AD128E3328B15F1500B004F2 /* MessengerBluetoothDataSource.swift in Sources */,
+				ADE73CB528EF7F4900746CF2 /* MessengerMockDataSource.swift in Sources */,
 				AD8C1EBF28BEDEDF00A40CB4 /* MessageBalloon.swift in Sources */,
 				AD85DA5E28B98D6000694753 /* ModelExtensions.swift in Sources */,
 				ADE73CAF28EF7A7A00746CF2 /* MessengerRepository.swift in Sources */,
-				ADE73CB228EF7B3D00746CF2 /* MessengerTech.swift in Sources */,
+				ADE73CB228EF7B3D00746CF2 /* MessengerDataSource.swift in Sources */,
 				AD128E2328B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
-				AD5AFEF128E654F3006F026E /* MessagesView.swift in Sources */,
+				AD5AFEF128E654F3006F026E /* MessagesScreen.swift in Sources */,
 				AD55801D28B997E90027A6FE /* ArrayExtensions.swift in Sources */,
 				AD8C1EBB28BEC00C00A40CB4 /* Direction.swift in Sources */,
 			);

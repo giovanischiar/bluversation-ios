@@ -1,6 +1,6 @@
 //
 //  TextFieldEditor.swift
-//  slowpoke
+//  view.conversation.component
 //
 //  Created by Giovani Schiar on 31/08/22.
 //

@@ -1,6 +1,6 @@
 //
 //  ArrayExtensions.swift
-//  viewmodel
+//  viewmodel.util
 //
 //  Created by Giovani Schiar on 26/08/22.
 //

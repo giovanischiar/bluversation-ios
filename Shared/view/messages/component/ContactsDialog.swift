@@ -1,13 +1,13 @@
 //
-//  ContactsView.swift
-//  view
+//  ContactsScreen.swift
+//  view.messages.component
 //
 //  Created by Giovani Schiar on 23/08/22.
 //
 
 import SwiftUI
 
-struct ContactsView: View {
+struct ContactsDialog: View {
     @EnvironmentObject private var viewModel: MessengerViewModel
     @State private var isConfirmDisconnectAlertShowing = false
     
@@ -32,7 +32,7 @@ struct ContactsView: View {
     }
 }
 
-extension ContactsView {
+extension ContactsDialog {
     func generateConnectDisconnectButton(for contact: ContactViewData) -> some View {
         if let remoteContact = viewModel.remoteContact {
             if (remoteContact == contact) {

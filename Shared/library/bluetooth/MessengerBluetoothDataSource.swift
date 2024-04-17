@@ -1,6 +1,6 @@
 //
-//  BluetoothMessengerTech.swift
-//  messenger
+//  MessengerBluetoothDataSource.swift
+//  library.bluetooth
 //
 //  Created by Giovani Schiar on 20/08/22.
 //
@@ -27,7 +27,7 @@ import class Foundation.NSNumber
 import struct Combine.AnyPublisher
 import class Combine.PassthroughSubject
 
-class BluetoothMessengerTech: NSObject, MessengerTech {
+class MessengerBluetoothDataSource: NSObject, MessengerDataSource {
     private var peripheralPassthroughSubject = PassthroughSubject<Contact, Never>()
     var contactPublisher: AnyPublisher<Contact, Never> {
         peripheralPassthroughSubject.eraseToAnyPublisher()
@@ -83,7 +83,7 @@ class BluetoothMessengerTech: NSObject, MessengerTech {
     }
 }
 
-extension BluetoothMessengerTech: CBPeripheralManagerDelegate {
+extension MessengerBluetoothDataSource: CBPeripheralManagerDelegate {
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         guard peripheral.state == .poweredOn else { return }
         let serialService = CBMutableService(type: WR_UUID, primary: true)
@@ -118,7 +118,7 @@ extension BluetoothMessengerTech: CBPeripheralManagerDelegate {
     }
 }
 
-extension BluetoothMessengerTech: CBCentralManagerDelegate {
+extension MessengerBluetoothDataSource: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .poweredOn: centralManager.scanForPeripherals(withServices: [WR_UUID], options: nil)
@@ -150,7 +150,7 @@ extension BluetoothMessengerTech: CBCentralManagerDelegate {
     }
 }
 
-extension BluetoothMessengerTech: CBPeripheralDelegate {
+extension MessengerBluetoothDataSource: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         for service in peripheral.services! {
             peripheral.discoverCharacteristics(nil, for: service)

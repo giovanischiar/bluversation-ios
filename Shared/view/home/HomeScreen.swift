@@ -1,32 +1,32 @@
 //
 //  ContentView.swift
-//  view
+//  view.home
 //
 //  Created by Giovani Schiar on 20/08/22.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeScreen: View {
     @EnvironmentObject private var viewModel: MessengerViewModel
     
     var body: some View {
-        let messagesView = MessagesView()
-        let conversationView = ConversationView()
+        let messagesScreen = MessagesScreen()
+        let conversationScreen = ConversationScreen()
 #if os(iOS)
         NavigationView {
             VStack {
-                messagesView
+                messagesScreen
                 NavigationLink(
-                    destination: conversationView,
+                    destination: conversationScreen,
                     isActive: .constant(viewModel.remoteContact != nil)
                 ) { EmptyView() }
             }
         }
 #else
         NavigationView {
-            messagesView
-            conversationView
+            messagesScreen
+            conversationScreen
         }
 #endif
     }
@@ -34,7 +34,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = MessengerViewModel(messengerTech: MockMessengerTech())
-        ContentView().environmentObject(viewModel)
+        let viewModel = MessengerViewModel(
+            messengerRepository: MessengerRepository(
+                messengerDataSource: MessengerMockDataSource()
+            )
+        )
+        HomeScreen().environmentObject(viewModel)
     }
 }
