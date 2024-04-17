@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import Combine
 
 class MessengerViewModel: ObservableObject {
     private let messengerRepository: MessengerRepository
-    
+        
+    private var cancellables: Set<AnyCancellable> = []
     @Published private(set) var contacts: Array<ContactViewData> = []
     @Published private(set) var clientContact: ContactViewData? = nil
     @Published private(set) var remoteContact: ContactViewData? = nil
@@ -19,8 +21,18 @@ class MessengerViewModel: ObservableObject {
     
     init(messengerTech: any MessengerTech = BluetoothMessengerTech()) {
         messengerRepository = MessengerRepository(messengerTech: messengerTech)
-        messengerRepository.registerForContacts(callback: addNewContact(contact:))
-        messengerRepository.registerForMessages(callback: receive(from:a:))
+        messengerRepository
+            .contactsPublisher
+            .sink { contact in self.addNewContact(contact: contact) }
+            .store(in: &self.cancellables)
+        
+        messengerRepository.messagesPublisher.sink { (values: [(Contact, Message)]) in
+            values.forEach { value in
+                let (contact, message) = value
+                self.receive(from: contact, a: message)
+            }
+        }
+        .store(in: &self.cancellables)
     }
     
     private func addNewContact(contact: Contact) {
@@ -71,7 +83,9 @@ class MessengerViewModel: ObservableObject {
         if(clientContact?.id == id) {
             clientContact = nil
         } else {
-            clientContact = contacts.filter({ $0.id == id }).first
+            let clientContact = contacts.filter({ $0.id == id }).first
+            print("connecting \(clientContact?.name ?? "null")")
+            self.clientContact = clientContact
         }
     }
     
