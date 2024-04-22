@@ -43,8 +43,8 @@ class MessengerBluetoothDataSource: NSObject, MessengerDataSource {
         disconnectedPeripheralPassthroughSubject.eraseToAnyPublisher()
     }
     
-    private var messagesPassthroughSubject = PassthroughSubject<[(Contact, Message)], Never>()
-    var messagesPublisher: AnyPublisher<[(Contact, Message)], Never> {
+    private var messagesPassthroughSubject = PassthroughSubject<(Contact, Message), Never>()
+    var messagesPublisher: AnyPublisher<(Contact, Message), Never> {
         messagesPassthroughSubject.eraseToAnyPublisher()
     }
     
@@ -78,7 +78,8 @@ class MessengerBluetoothDataSource: NSObject, MessengerDataSource {
         guard let characteristic = characteriticOfConnectedPeripheral else { return }
         guard let peripheral = connectedPeripheral else { return }
         let data = message.data(using: .utf8)
-        messagesPassthroughSubject.send([(peripheral.toContact(), Message(sent: true, content: message))])
+        print("message sending!: \(message)")
+        messagesPassthroughSubject.send((peripheral.toContact(), Message(sent: true, content: message)))
         peripheral.writeValue(data!, for: characteristic, type: CBCharacteristicWriteType.withResponse)
     }
 }
@@ -104,13 +105,12 @@ extension MessengerBluetoothDataSource: CBPeripheralManagerDelegate {
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveWrite requests: [CBATTRequest]) {
         for request in requests {
             if let value = request.value {
-                
                 //here is the message text that we receive, use it as you wish.
                 let messageText = String(data: value, encoding: String.Encoding.utf8) as String?
                 guard let message = messageText else { return }
                 print("message received!: \(messageText ?? "nil")")
                 guard let whoSent = peripheralsFound[request.central.identifier.uuidString] else { return }
-                messagesPassthroughSubject.send([(whoSent.toContact(), Message(sent: false, content: message))])
+                messagesPassthroughSubject.send((whoSent.toContact(), Message(sent: false, content: message)))
                 
             }
             self.peripheralManager.respond(to: request, withResult: .success)
@@ -169,6 +169,6 @@ extension MessengerBluetoothDataSource: CBPeripheralDelegate {
 
 extension CBPeripheral {
     func toContact() -> Contact {
-        return Contact(id: self.identifier, name: self.name, description: self.description)
+        return Contact(id: self.identifier, name: self.name)
     }
 }

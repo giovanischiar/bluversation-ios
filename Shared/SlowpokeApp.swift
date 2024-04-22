@@ -9,16 +9,34 @@ import SwiftUI
 
 @main
 struct SlowpokeApp: App {
-    @ObservedObject private var viewModel = MessengerViewModel(
-        messengerRepository: MessengerRepository(
-            messengerDataSource: MessengerBluetoothDataSource()
+    @ObservedObject private var conversationsViewModel: ConversationsViewModel
+    @ObservedObject private var conversationViewModel: ConversationViewModel
+    
+    init() {
+        let messengerDataSource = MessengerBluetoothDataSource()
+        let currentContactIDDataSource = CurrentContactIDLocalDataSource()
+        let conversationDataSource = ConversationLocalDataSource(messengerDataSource: messengerDataSource)
+        
+        conversationsViewModel = ConversationsViewModel(
+            contactsRepository: ConversationsRepository(
+                conversationDataSource: conversationDataSource,
+                currentContactIDDataSource: currentContactIDDataSource
+            )
         )
-    )
+        
+        conversationViewModel = ConversationViewModel(
+            conversationRepository: ConversationRepository(
+                conversationDataSource: conversationDataSource,
+                currentContactIDDataSource: currentContactIDDataSource
+            )
+        )
+    }
     
     var body: some Scene {
         WindowGroup {
             HomeScreen()
-                .environmentObject(viewModel)
+                .environmentObject(conversationsViewModel)
+                .environmentObject(conversationViewModel)
         }
     }
 }

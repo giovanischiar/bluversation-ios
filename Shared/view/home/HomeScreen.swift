@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeScreen.swift
 //  view.home
 //
 //  Created by Giovani Schiar on 20/08/22.
@@ -8,37 +8,53 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @EnvironmentObject private var viewModel: MessengerViewModel
+    @State var isNavigationLinkToConversationActive = false
     
     var body: some View {
-        let messagesScreen = MessagesScreen()
+        let conversationsScreen = ConversationsScreen(
+            onNavigateToConversation: { isNavigationLinkToConversationActive = true }
+        )
         let conversationScreen = ConversationScreen()
 #if os(iOS)
         NavigationView {
             VStack {
-                messagesScreen
+                conversationsScreen
                 NavigationLink(
                     destination: conversationScreen,
-                    isActive: .constant(viewModel.remoteContact != nil)
+                    isActive: $isNavigationLinkToConversationActive
                 ) { EmptyView() }
             }
         }
 #else
         NavigationView {
-            messagesScreen
+            conversationsScreen
             conversationScreen
         }
 #endif
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = MessengerViewModel(
-            messengerRepository: MessengerRepository(
-                messengerDataSource: MessengerMockDataSource()
+        let messengerDataSource = MessengerMockDataSource()
+        let currentContactIDDataSource = CurrentContactIDLocalDataSource()
+        let conversationDataSource = ConversationLocalDataSource(messengerDataSource: messengerDataSource)
+        
+        let contactsViewModel = ConversationsViewModel(
+            contactsRepository: ConversationsRepository(
+                conversationDataSource: conversationDataSource,
+                currentContactIDDataSource: currentContactIDDataSource
             )
         )
-        HomeScreen().environmentObject(viewModel)
+        
+        let conversationViewModel = ConversationViewModel(
+            conversationRepository: ConversationRepository(
+                conversationDataSource: conversationDataSource,
+                currentContactIDDataSource: currentContactIDDataSource
+            )
+        )
+        HomeScreen()
+            .environmentObject(contactsViewModel)
+            .environmentObject(conversationViewModel)
     }
 }

@@ -30,11 +30,8 @@ class MessengerViewModel: ObservableObject {
             .sink { contact in self.addNewContact(contact: contact) }
             .store(in: &self.cancellables)
         
-        messengerRepository.messagesPublisher.sink { (values: [(Contact, Message)]) in
-            values.forEach { value in
-                let (contact, message) = value
-                self.receive(from: contact, a: message)
-            }
+        messengerRepository.messagesPublisher.sink { (contact, message) in
+            self.receive(from: contact, a: message)
         }
         .store(in: &self.cancellables)
     }

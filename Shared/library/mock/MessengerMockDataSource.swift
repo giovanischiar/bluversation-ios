@@ -34,17 +34,17 @@ class MessengerMockDataSource: MessengerDataSource {
         disconnectedPassthroughSubject.eraseToAnyPublisher()
     }
     
-    private var messagesCurrentValueSubject: CurrentValueSubject<[(Contact, Message)], Never>
-    var messagesPublisher: AnyPublisher<[(Contact, Message)], Never> {
+    private var messagesCurrentValueSubject: CurrentValueSubject<(Contact, Message), Never>
+    var messagesPublisher: AnyPublisher<(Contact, Message), Never> {
         messagesCurrentValueSubject.eraseToAnyPublisher()
     }
     
     init() {
         contactsDict = mockGenerator.generateContacts()
         messagesPerContactID = mockGenerator.generateMessagesPerContact()
-        messagesCurrentValueSubject = CurrentValueSubject(
-            contactsDict.toValuesArray().generateMessages(messagesPerContactID: messagesPerContactID)
-        )
+        let messagesGenerated = contactsDict.toValuesArray().generateMessages(messagesPerContactID: messagesPerContactID)
+        messagesCurrentValueSubject = CurrentValueSubject(messagesGenerated[0])
+        messagesGenerated.forEach { messagesCurrentValueSubject.send($0) }
     }
     
     func connectContact(with id: String) {
@@ -64,7 +64,7 @@ class MessengerMockDataSource: MessengerDataSource {
         var messages = messagesPerContactID[contact.id] ?? []
         let messageSent = Message(sent: true, content: message)
         messages.append(messageSent)
-        messagesCurrentValueSubject.send([(contact, messageSent)])
+        messagesCurrentValueSubject.send((contact, messageSent))
     }
 }
 

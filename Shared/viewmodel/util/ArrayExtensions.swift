@@ -5,6 +5,8 @@
 //  Created by Giovani Schiar on 26/08/22.
 //
 
+import Foundation
+
 extension Array where Array.Element == Message {
     func toViewData() -> [MessageViewData] {
         return map { $0.toViewData() }
@@ -23,3 +25,11 @@ extension Array where Array.Element == (Contact, Message) {
         return map {($0.toViewData(), $1.toViewData())}
     }
 }
+
+extension Array where Array.Element == Contact {
+    func toViewData() -> [ContactViewData] {
+        return map { $0.toViewData() }
+    }
+}
+
+

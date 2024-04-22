@@ -23,7 +23,7 @@ struct MockGenerator {
     func generateContacts() -> [UUID: Contact] {
         var newDict: [UUID: Contact] = [:]
         contactsIDs.forEach {
-            newDict[$0] = Contact(id: $0, name: $1, description: "mock")
+            newDict[$0] = Contact(id: $0, name: $1)
         }
         return newDict
     }

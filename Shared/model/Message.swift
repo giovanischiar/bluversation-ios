@@ -5,7 +5,7 @@
 //  Created by Giovani Schiar on 26/08/22.
 //
 
-struct Message {
+struct Message: Equatable {
     let sent: Bool
     let content: String
 }

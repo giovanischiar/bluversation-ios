@@ -16,3 +16,9 @@ extension Message {
         return MessageViewData(direction: sent ? .right : .left, content: content)
     }
 }
+
+extension Conversation {
+    func toViewData() -> ConversationViewData {
+        return ConversationViewData(contact: contact.toViewData(), messages: messages.toViewData())
+    }
+}
