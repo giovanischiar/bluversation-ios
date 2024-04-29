@@ -1,5 +1,5 @@
 //
-//  SlowpokeApp.swift
+//  BluversationApp.swift
 //  Shared
 //
 //  Created by Giovani Schiar on 20/08/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct SlowpokeApp: App {
+struct BluversationApp: App {
     @ObservedObject private var conversationsViewModel: ConversationsViewModel
     @ObservedObject private var conversationViewModel: ConversationViewModel
     

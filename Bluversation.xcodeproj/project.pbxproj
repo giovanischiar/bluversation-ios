@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD128E2228B0E4F000B004F2 /* SlowpokeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1228B0E4E800B004F2 /* SlowpokeApp.swift */; };
-		AD128E2328B0E4F000B004F2 /* SlowpokeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1228B0E4E800B004F2 /* SlowpokeApp.swift */; };
+		AD128E2228B0E4F000B004F2 /* BluversationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1228B0E4E800B004F2 /* BluversationApp.swift */; };
+		AD128E2328B0E4F000B004F2 /* BluversationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1228B0E4E800B004F2 /* BluversationApp.swift */; };
 		AD128E2428B0E4F000B004F2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1328B0E4E800B004F2 /* HomeScreen.swift */; };
 		AD128E2528B0E4F000B004F2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1328B0E4E800B004F2 /* HomeScreen.swift */; };
 		AD128E2628B0E4F000B004F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD128E1428B0E4F000B004F2 /* Assets.xcassets */; };
@@ -76,13 +76,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD128E1228B0E4E800B004F2 /* SlowpokeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowpokeApp.swift; sourceTree = "<group>"; };
+		AD128E1228B0E4E800B004F2 /* BluversationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluversationApp.swift; sourceTree = "<group>"; };
 		AD128E1328B0E4E800B004F2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		AD128E1428B0E4F000B004F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AD128E1928B0E4F000B004F2 /* slowpoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slowpoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD128E1F28B0E4F000B004F2 /* slowpoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slowpoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD128E1928B0E4F000B004F2 /* Bluversation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluversation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD128E1F28B0E4F000B004F2 /* Bluversation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluversation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD128E2128B0E4F000B004F2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		AD128E3028B0FDFC00B004F2 /* slowpoke--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "slowpoke--iOS--Info.plist"; sourceTree = "<group>"; };
+		AD128E3028B0FDFC00B004F2 /* Bluversation--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bluversation--iOS--Info.plist"; sourceTree = "<group>"; };
 		AD128E3128B15F1500B004F2 /* MessengerBluetoothDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerBluetoothDataSource.swift; sourceTree = "<group>"; };
 		AD4483A228BA078A00116D00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AD55801B28B997E90027A6FE /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		AD128E0C28B0E4E700B004F2 = {
 			isa = PBXGroup;
 			children = (
-				AD128E3028B0FDFC00B004F2 /* slowpoke--iOS--Info.plist */,
+				AD128E3028B0FDFC00B004F2 /* Bluversation--iOS--Info.plist */,
 				AD128E2028B0E4F000B004F2 /* macOS */,
 				AD128E1A28B0E4F000B004F2 /* Products */,
 				AD128E1128B0E4E800B004F2 /* Shared */,
@@ -147,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				AD128E1428B0E4F000B004F2 /* Assets.xcassets */,
-				AD128E1228B0E4E800B004F2 /* SlowpokeApp.swift */,
+				AD128E1228B0E4E800B004F2 /* BluversationApp.swift */,
 				AD55E4E42BD07EC800CA9B78 /* library */,
 				AD8321AA28B6FBB60020375A /* model */,
 				AD8321A628B6FB070020375A /* view */,
@@ -159,8 +159,8 @@
 		AD128E1A28B0E4F000B004F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD128E1928B0E4F000B004F2 /* slowpoke.app */,
-				AD128E1F28B0E4F000B004F2 /* slowpoke.app */,
+				AD128E1928B0E4F000B004F2 /* Bluversation.app */,
+				AD128E1F28B0E4F000B004F2 /* Bluversation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -355,9 +355,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AD128E1828B0E4F000B004F2 /* slowpoke (iOS) */ = {
+		AD128E1828B0E4F000B004F2 /* Bluversation (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD128E2A28B0E4F000B004F2 /* Build configuration list for PBXNativeTarget "slowpoke (iOS)" */;
+			buildConfigurationList = AD128E2A28B0E4F000B004F2 /* Build configuration list for PBXNativeTarget "Bluversation (iOS)" */;
 			buildPhases = (
 				AD128E1528B0E4F000B004F2 /* Sources */,
 				AD128E1628B0E4F000B004F2 /* Frameworks */,
@@ -367,14 +367,14 @@
 			);
 			dependencies = (
 			);
-			name = "slowpoke (iOS)";
-			productName = "slowpoke (iOS)";
-			productReference = AD128E1928B0E4F000B004F2 /* slowpoke.app */;
+			name = "Bluversation (iOS)";
+			productName = "Bluversation (iOS)";
+			productReference = AD128E1928B0E4F000B004F2 /* Bluversation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AD128E1E28B0E4F000B004F2 /* slowpoke (macOS) */ = {
+		AD128E1E28B0E4F000B004F2 /* Bluversation (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD128E2D28B0E4F000B004F2 /* Build configuration list for PBXNativeTarget "slowpoke (macOS)" */;
+			buildConfigurationList = AD128E2D28B0E4F000B004F2 /* Build configuration list for PBXNativeTarget "Bluversation (macOS)" */;
 			buildPhases = (
 				AD128E1B28B0E4F000B004F2 /* Sources */,
 				AD128E1C28B0E4F000B004F2 /* Frameworks */,
@@ -384,9 +384,9 @@
 			);
 			dependencies = (
 			);
-			name = "slowpoke (macOS)";
-			productName = "slowpoke (macOS)";
-			productReference = AD128E1F28B0E4F000B004F2 /* slowpoke.app */;
+			name = "Bluversation (macOS)";
+			productName = "Bluversation (macOS)";
+			productReference = AD128E1F28B0E4F000B004F2 /* Bluversation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -407,7 +407,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AD128E1028B0E4E700B004F2 /* Build configuration list for PBXProject "slowpoke" */;
+			buildConfigurationList = AD128E1028B0E4E700B004F2 /* Build configuration list for PBXProject "Bluversation" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -420,8 +420,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD128E1828B0E4F000B004F2 /* slowpoke (iOS) */,
-				AD128E1E28B0E4F000B004F2 /* slowpoke (macOS) */,
+				AD128E1828B0E4F000B004F2 /* Bluversation (iOS) */,
+				AD128E1E28B0E4F000B004F2 /* Bluversation (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -471,7 +471,7 @@
 				AD8C1EBE28BEDEDF00A40CB4 /* MessageBalloon.swift in Sources */,
 				AD85DA5D28B98D6000694753 /* ModelExtensions.swift in Sources */,
 				ADE73CB128EF7B3D00746CF2 /* MessengerDataSource.swift in Sources */,
-				AD128E2228B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
+				AD128E2228B0E4F000B004F2 /* BluversationApp.swift in Sources */,
 				AD55E4F22BD0981200CA9B78 /* CurrentContactIDDataSource.swift in Sources */,
 				AD5AFEF028E654F3006F026E /* ConversationsScreen.swift in Sources */,
 				AD55E4EC2BD087DC00CA9B78 /* ConversationRepository.swift in Sources */,
@@ -510,7 +510,7 @@
 				AD8C1EBF28BEDEDF00A40CB4 /* MessageBalloon.swift in Sources */,
 				AD85DA5E28B98D6000694753 /* ModelExtensions.swift in Sources */,
 				ADE73CB228EF7B3D00746CF2 /* MessengerDataSource.swift in Sources */,
-				AD128E2328B0E4F000B004F2 /* SlowpokeApp.swift in Sources */,
+				AD128E2328B0E4F000B004F2 /* BluversationApp.swift in Sources */,
 				AD55E4F32BD0981200CA9B78 /* CurrentContactIDDataSource.swift in Sources */,
 				AD5AFEF128E654F3006F026E /* ConversationsScreen.swift in Sources */,
 				AD55E4ED2BD087DC00CA9B78 /* ConversationRepository.swift in Sources */,
@@ -649,8 +649,9 @@
 				DEVELOPMENT_TEAM = 3N272GBMGD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "slowpoke--iOS--Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Slowpoke;
+				INFOPLIST_FILE = "Bluversation--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Bluversaion;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App uses bluetooth to talk and search other contatcs";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -662,8 +663,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.schiar.slowpoke;
-				PRODUCT_NAME = slowpoke;
+				PRODUCT_BUNDLE_IDENTIFIER = io.schiar.Bluversation;
+				PRODUCT_NAME = Bluversation;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -683,8 +684,9 @@
 				DEVELOPMENT_TEAM = 3N272GBMGD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "slowpoke--iOS--Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Slowpoke;
+				INFOPLIST_FILE = "Bluversation--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Bluversaion;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App uses bluetooth to talk and search other contatcs";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -696,8 +698,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.schiar.slowpoke;
-				PRODUCT_NAME = slowpoke;
+				PRODUCT_BUNDLE_IDENTIFIER = io.schiar.Bluversation;
+				PRODUCT_NAME = Bluversation;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -730,8 +732,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.schiar.slowpoke;
-				PRODUCT_NAME = slowpoke;
+				PRODUCT_BUNDLE_IDENTIFIER = io.schiar.Bluversation;
+				PRODUCT_NAME = Bluversation;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -761,8 +763,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.schiar.slowpoke;
-				PRODUCT_NAME = slowpoke;
+				PRODUCT_BUNDLE_IDENTIFIER = io.schiar.Bluversation;
+				PRODUCT_NAME = Bluversation;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -772,7 +774,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AD128E1028B0E4E700B004F2 /* Build configuration list for PBXProject "slowpoke" */ = {
+		AD128E1028B0E4E700B004F2 /* Build configuration list for PBXProject "Bluversation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD128E2828B0E4F000B004F2 /* Debug */,
@@ -781,7 +783,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD128E2A28B0E4F000B004F2 /* Build configuration list for PBXNativeTarget "slowpoke (iOS)" */ = {
+		AD128E2A28B0E4F000B004F2 /* Build configuration list for PBXNativeTarget "Bluversation (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD128E2B28B0E4F000B004F2 /* Debug */,
@@ -790,7 +792,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD128E2D28B0E4F000B004F2 /* Build configuration list for PBXNativeTarget "slowpoke (macOS)" */ = {
+		AD128E2D28B0E4F000B004F2 /* Build configuration list for PBXNativeTarget "Bluversation (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD128E2E28B0E4F000B004F2 /* Debug */,

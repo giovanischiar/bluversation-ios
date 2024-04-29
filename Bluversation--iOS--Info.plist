@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>App uses bluetooth to talk and search other contatcs</string>
 	<key>App communicates using Core Bluetooth</key>
 	<string>App uses bluetooth to talk and search other contatcs</string>
 	<key>Privacy – Bluetooth Peripheral Usage Description</key>

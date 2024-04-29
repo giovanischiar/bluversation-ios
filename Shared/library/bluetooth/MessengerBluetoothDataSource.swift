@@ -94,7 +94,7 @@ extension MessengerBluetoothDataSource: CBPeripheralManagerDelegate {
         serialService.characteristics = [writeCharacteristics]
         peripheralManager.add(serialService)
         
-        let advertisementData = "Slowpoke"
+        let advertisementData = "Bluversation"
         peripheralManager.startAdvertising([
                 CBAdvertisementDataServiceUUIDsKey: [WR_UUID],
                 CBAdvertisementDataLocalNameKey: advertisementData
