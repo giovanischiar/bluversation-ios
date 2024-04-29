@@ -1,6 +1,6 @@
 //
 //  ConversationViewData.swift
-//  slowpoke
+//  view.shared.viewdata
 //
 //  Created by Giovani Schiar on 18/04/24.
 //
