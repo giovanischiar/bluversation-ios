@@ -10,7 +10,18 @@ import struct SwiftUI.UUID
 struct MockGenerator {
     private let lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet lorem quis sem congue pulvinar. Phasellus finibus purus quis nibh elementum ornare. Aliquam egestas, risus vitae pharetra ornare, orci felis commodo massa, egestas placerat ante eros ut ligula. Vivamus pulvinar neque vitae nibh auctor, ac aliquam felis consectetur. In commodo accumsan euismod. Nam laoreet pulvinar convallis. Quisque cursus sem in pellentesque pellentesque. Curabitur rhoncus neque nibh, quis lobortis nisi auctor nec. Praesent cursus mi elit, vestibulum condimentum magna consectetur vel. Aenean scelerisque pellentesque venenatis. Nam vitae dignissim orci."
     
-    private let names = ["Alex Machado", "Giovani Schiar", "Samantha Daniele", "Thiago Cechetto", "Rodrigo Almeida", "Mariana Ambrogi"]
+    private let names = [
+        "Tony Reynolds",
+        "Faye Orr",
+        "Elisabeth Wyatt",
+        "Magnus Schwartz",
+        "Christian Riggs",
+        "India Molina",
+        "Lawrence Young",
+        "Laura Russell",
+        "Gordon Blanchard",
+        "Faiza Ford"
+    ]
     
     private let contactsIDs: [UUID: String]
     
