@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ConversationsScreen: View {
-    @EnvironmentObject private var contactsViewModel: ConversationsViewModel
+    @EnvironmentObject private var conversationsViewModel: ConversationsViewModel
     private let onNavigateToConversation: () -> Void
     
     init(onNavigateToConversation: @escaping () -> Void) {
@@ -19,12 +19,16 @@ struct ConversationsScreen: View {
     @State private var showContactsList = false
    
     var body: some View {
-        List(contactsViewModel.contactWithLastMessageList, id: \.1.id) { contact in
-            let (contact, message) = contact
+        List(conversationsViewModel.contactWithLastMessageList, id: \.1.id) { (contact, message) in
             MessageView(
                 contact: contact,
-                lastMessage: message
-            ) { contactsViewModel.selectConversation(with: contact.id); onNavigateToConversation() }
+                lastMessage: message,
+                isSelected: conversationsViewModel.currentContactID == contact.id
+            ) {
+                conversationsViewModel.currentContactID = contact.id
+                conversationsViewModel.selectConversation(with: contact.id);
+                onNavigateToConversation()
+            }
         }
         .listStyle(.plain)
         .navigationTitle("Messages")
@@ -35,9 +39,9 @@ struct ConversationsScreen: View {
         }
         .popover(isPresented: $showContactsList) {
             ContactsDialog(
-                contacts: contactsViewModel.contacts,
+                contacts: conversationsViewModel.contacts,
                 onContactSelectedWith: { id in
-                    contactsViewModel.selectConversation(with: id)
+                    conversationsViewModel.selectConversation(with: id)
                     showContactsList = false
                     onNavigateToConversation()
                 }

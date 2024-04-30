@@ -10,16 +10,19 @@ import SwiftUI
 struct MessageView: View {
     private var contact: ContactViewData
     private var lastMessage: MessageViewData?
+    private var isSelected: Bool
     private var onTap: () -> Void
         
     init(
         contact: ContactViewData,
         lastMessage: MessageViewData?,
+        isSelected: Bool,
         onTap: @escaping () -> Void
     ) {
         self.contact = contact
         self.lastMessage = lastMessage
         self.onTap = onTap
+        self.isSelected = isSelected
     }
     
     var body: some View {
@@ -39,6 +42,8 @@ struct MessageView: View {
                     }
                 }
             }
-        }.onTapGesture { onTap() }
+        }
+        .background(isSelected ? Color.gray/*("#DEE7E7")*/ : nil)
+        .onTapGesture { onTap() }
     }
 }

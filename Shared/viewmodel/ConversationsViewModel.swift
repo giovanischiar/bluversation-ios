@@ -12,6 +12,7 @@ class ConversationsViewModel: ObservableObject {
     
     @Published var contactWithLastMessageList: [(ContactViewData, MessageViewData)] = []
     @Published var contacts: [ContactViewData] = []
+    @Published var currentContactID = ""
     
     init(contactsRepository: ConversationsRepository) {
         self.conversationsRepository = contactsRepository
@@ -28,6 +29,7 @@ class ConversationsViewModel: ObservableObject {
     }
     
     func selectContact(of id: String) {
+        currentContactID = id
         conversationsRepository.selectContact(of: id)
     }
 }
