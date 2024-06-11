@@ -14,6 +14,7 @@
   - [Project structure](#project-structure)
   - [Group `view` and `viewmodel`](#group-view-and-viewmodel)
   - [Group `view.viewdata`](#group-viewviewdata)
+  - [Group `viewmodel` and `view.viewdata`](#group-viewmodel-and-viewviewdata)
 - [Future Tasks](#future-tasks)
 
 ## Use Cases
@@ -98,6 +99,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/viewdata-diagram.dark.svg">
   <img alt="ViewData Diagram" src="./readme-res/diagrams/viewdata-diagram.light.svg">
+</picture>
+
+### Group `viewmodel` and `view.viewdata`
+  View Models serve the `view` with objects made from `view.viewdata` structs, collections, or primitive objects encapsulated by Publishers. This diagram represents all the associations among the artifacts in `viewmodel` and `view.viewdata`.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/viewmodel-viewdata-diagram.dark.svg">
+  <img alt="ViewModel/ViewData Diagram" src="./readme-res/diagrams/viewmodel-viewdata-diagram.light.svg">
 </picture>
 
 ## Future Tasks
