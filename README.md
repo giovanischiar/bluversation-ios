@@ -10,6 +10,8 @@
 
 - [Use Cases](#use-cases)
 - [Technologies](#technologies)
+- [Diagrams](#diagrams)
+  - [Project structure](#project-structure)
 - [Future Tasks](#future-tasks)
 
 ## Use Cases
@@ -68,6 +70,17 @@
 |:-:|:-:|
 |<img src="https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png" width="50" height="50"><br>[SwiftUI](https://developer.apple.com/xcode/swiftui/)|Design UI|  
 |<img src="https://www.bluetooth.com/wp-content/uploads/2019/10/Master-Icon-File_Logo-600x600.png" width="50" height="50"><br>[Bluetooth](https://developer.apple.com/xcode/swiftui/)|Communication between the devices|  
+
+## Diagrams
+  Please check <a href="https://github.com/giovanischiar/diagram-notation">this repository</a> to learn more about the notation I used to create the diagrams in this project.
+
+### Project structure
+  This diagram shows all the groups the application has, along with their structures. Some groups are simplified, while others are more detailed.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/project-structure-diagram.dark.svg">
+  <img alt="Whole Project Diagram" src="./readme-res/diagrams/project-structure-diagram.light.svg">
+</picture>
 
 ## Future Tasks
   - Improve the stability. After some time, the connection between the devices is lost.
