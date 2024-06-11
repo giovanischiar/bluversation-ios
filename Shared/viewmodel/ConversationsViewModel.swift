@@ -10,18 +10,19 @@ import Combine
 class ConversationsViewModel: ObservableObject {
     private let conversationsRepository: ConversationsRepository
     
-    @Published var contactWithLastMessageList: [(ContactViewData, MessageViewData)] = []
-    @Published var contacts: [ContactViewData] = []
-    @Published var currentContactID = ""
+    @Published var contactWithLastMessageListUIState: ContactWithLastMessageListUIState = .loading
+    @Published var contactsUIState: ContactsUIState = .loading
+    @Published var currentContactIDUIState: CurrentContactIDUIState = .loading
     
     init(contactsRepository: ConversationsRepository) {
         self.conversationsRepository = contactsRepository
-        contactsRepository.contactsPublisher
-            .map { $0.toViewData() }
-            .assign(to: &$contacts)
         contactsRepository.contactWithLastMessageListPublisher
-            .map { $0.toViewData() }
-            .assign(to: &$contactWithLastMessageList)
+            .map { ContactWithLastMessageListUIState.contactWithLastMessageListLoaded($0.toViewData()) }
+            .assign(to: &$contactWithLastMessageListUIState)
+        
+        contactsRepository.contactsPublisher
+            .map { ContactsUIState.contactsLoaded($0.toViewData()) }
+            .assign(to: &$contactsUIState)
     }
     
     func selectConversation(with contactID: String) {
@@ -29,7 +30,7 @@ class ConversationsViewModel: ObservableObject {
     }
     
     func selectContact(of id: String) {
-        currentContactID = id
+        currentContactIDUIState = CurrentContactIDUIState.currentContactIDLoaded(id)
         conversationsRepository.selectContact(of: id)
     }
 }

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		AD128E2228B0E4F000B004F2 /* BluversationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1228B0E4E800B004F2 /* BluversationApp.swift */; };
 		AD128E2328B0E4F000B004F2 /* BluversationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1228B0E4E800B004F2 /* BluversationApp.swift */; };
-		AD128E2428B0E4F000B004F2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1328B0E4E800B004F2 /* HomeScreen.swift */; };
-		AD128E2528B0E4F000B004F2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E1328B0E4E800B004F2 /* HomeScreen.swift */; };
 		AD128E2628B0E4F000B004F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD128E1428B0E4F000B004F2 /* Assets.xcassets */; };
 		AD128E2728B0E4F000B004F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD128E1428B0E4F000B004F2 /* Assets.xcassets */; };
 		AD128E3228B15F1500B004F2 /* MessengerBluetoothDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD128E3128B15F1500B004F2 /* MessengerBluetoothDataSource.swift */; };
@@ -65,8 +63,18 @@
 		AD961D7328B4DC3800F27AA8 /* ContactsDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD961D7128B4DC3800F27AA8 /* ContactsDialog.swift */; };
 		ADACED4928B436F60054E7BE /* ContactViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4828B436F60054E7BE /* ContactViewData.swift */; };
 		ADACED4A28B436F60054E7BE /* ContactViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACED4828B436F60054E7BE /* ContactViewData.swift */; };
+		ADC27F072C17B79F0022A2A6 /* ContactWithLastMessageListUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC27F062C17B79F0022A2A6 /* ContactWithLastMessageListUIState.swift */; };
+		ADC27F082C17B79F0022A2A6 /* ContactWithLastMessageListUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC27F062C17B79F0022A2A6 /* ContactWithLastMessageListUIState.swift */; };
+		ADC27F0D2C17C2760022A2A6 /* CurrentContactIDUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC27F0C2C17C2760022A2A6 /* CurrentContactIDUIState.swift */; };
+		ADC27F0E2C17C2760022A2A6 /* CurrentContactIDUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC27F0C2C17C2760022A2A6 /* CurrentContactIDUIState.swift */; };
+		ADC27F112C17C2E20022A2A6 /* ContactsUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC27F102C17C2E20022A2A6 /* ContactsUIState.swift */; };
+		ADC27F122C17C2E20022A2A6 /* ContactsUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC27F102C17C2E20022A2A6 /* ContactsUIState.swift */; };
 		ADCCC24F2BD07A5C00F4A98C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCCC24E2BD07A5C00F4A98C /* MessageView.swift */; };
 		ADCCC2502BD07A5C00F4A98C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCCC24E2BD07A5C00F4A98C /* MessageView.swift */; };
+		ADDE36DE2C18B38D001F8EB4 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE36DD2C18B38D001F8EB4 /* Navigation.swift */; };
+		ADDE36DF2C18B38D001F8EB4 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE36DD2C18B38D001F8EB4 /* Navigation.swift */; };
+		ADDE36E12C18B496001F8EB4 /* CurrentConversationUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE36E02C18B495001F8EB4 /* CurrentConversationUIState.swift */; };
+		ADDE36E22C18B496001F8EB4 /* CurrentConversationUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE36E02C18B495001F8EB4 /* CurrentConversationUIState.swift */; };
 		ADE73CB128EF7B3D00746CF2 /* MessengerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB028EF7B3D00746CF2 /* MessengerDataSource.swift */; };
 		ADE73CB228EF7B3D00746CF2 /* MessengerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB028EF7B3D00746CF2 /* MessengerDataSource.swift */; };
 		ADE73CB428EF7F4900746CF2 /* MessengerMockDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB328EF7F4900746CF2 /* MessengerMockDataSource.swift */; };
@@ -77,7 +85,6 @@
 
 /* Begin PBXFileReference section */
 		AD128E1228B0E4E800B004F2 /* BluversationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluversationApp.swift; sourceTree = "<group>"; };
-		AD128E1328B0E4E800B004F2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		AD128E1428B0E4F000B004F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD128E1928B0E4F000B004F2 /* Bluversation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluversation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD128E1F28B0E4F000B004F2 /* Bluversation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluversation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +116,12 @@
 		AD961D6E28B4DA5000F27AA8 /* ConversationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationScreen.swift; sourceTree = "<group>"; };
 		AD961D7128B4DC3800F27AA8 /* ContactsDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDialog.swift; sourceTree = "<group>"; };
 		ADACED4828B436F60054E7BE /* ContactViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewData.swift; sourceTree = "<group>"; };
+		ADC27F062C17B79F0022A2A6 /* ContactWithLastMessageListUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWithLastMessageListUIState.swift; sourceTree = "<group>"; };
+		ADC27F0C2C17C2760022A2A6 /* CurrentContactIDUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentContactIDUIState.swift; sourceTree = "<group>"; };
+		ADC27F102C17C2E20022A2A6 /* ContactsUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUIState.swift; sourceTree = "<group>"; };
 		ADCCC24E2BD07A5C00F4A98C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		ADDE36DD2C18B38D001F8EB4 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		ADDE36E02C18B495001F8EB4 /* CurrentConversationUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConversationUIState.swift; sourceTree = "<group>"; };
 		ADE73CB028EF7B3D00746CF2 /* MessengerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerDataSource.swift; sourceTree = "<group>"; };
 		ADE73CB328EF7F4900746CF2 /* MessengerMockDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerMockDataSource.swift; sourceTree = "<group>"; };
 		ADF6802128C00CD40072D524 /* TextFieldEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEditor.swift; sourceTree = "<group>"; };
@@ -220,8 +232,8 @@
 		AD8321A628B6FB070020375A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				ADDE36DC2C18B377001F8EB4 /* navigation */,
 				ADCCC2522BD07C8500F4A98C /* shared */,
-				ADCCC2512BD07C7200F4A98C /* home */,
 				ADCCC24B2BD0799200F4A98C /* conversation */,
 				ADCCC2492BD0797900F4A98C /* conversations */,
 			);
@@ -288,6 +300,16 @@
 			path = component;
 			sourceTree = "<group>";
 		};
+		ADC27F052C17B7670022A2A6 /* uistate */ = {
+			isa = PBXGroup;
+			children = (
+				ADC27F062C17B79F0022A2A6 /* ContactWithLastMessageListUIState.swift */,
+				ADC27F0C2C17C2760022A2A6 /* CurrentContactIDUIState.swift */,
+				ADC27F102C17C2E20022A2A6 /* ContactsUIState.swift */,
+			);
+			path = uistate;
+			sourceTree = "<group>";
+		};
 		ADCCC2482BD0778000F4A98C /* datasource */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +324,7 @@
 		ADCCC2492BD0797900F4A98C /* conversations */ = {
 			isa = PBXGroup;
 			children = (
+				ADC27F052C17B7670022A2A6 /* uistate */,
 				ADCCC24D2BD07A4300F4A98C /* component */,
 				AD5AFEEF28E654F3006F026E /* ConversationsScreen.swift */,
 			);
@@ -313,6 +336,7 @@
 			children = (
 				AD8C1EBC28BEDEA100A40CB4 /* component */,
 				AD961D6E28B4DA5000F27AA8 /* ConversationScreen.swift */,
+				ADDE36E02C18B495001F8EB4 /* CurrentConversationUIState.swift */,
 			);
 			path = conversation;
 			sourceTree = "<group>";
@@ -335,14 +359,6 @@
 			path = component;
 			sourceTree = "<group>";
 		};
-		ADCCC2512BD07C7200F4A98C /* home */ = {
-			isa = PBXGroup;
-			children = (
-				AD128E1328B0E4E800B004F2 /* HomeScreen.swift */,
-			);
-			path = home;
-			sourceTree = "<group>";
-		};
 		ADCCC2522BD07C8500F4A98C /* shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +366,14 @@
 				ADCCC24C2BD079C700F4A98C /* util */,
 			);
 			path = shared;
+			sourceTree = "<group>";
+		};
+		ADDE36DC2C18B377001F8EB4 /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				ADDE36DD2C18B38D001F8EB4 /* Navigation.swift */,
+			);
+			path = navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,6 +474,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC27F072C17B79F0022A2A6 /* ContactWithLastMessageListUIState.swift in Sources */,
+				ADC27F0D2C17C2760022A2A6 /* CurrentContactIDUIState.swift in Sources */,
 				AD85DA5728B98A4800694753 /* Contact.swift in Sources */,
 				AD4483A328BA078A00116D00 /* Constants.swift in Sources */,
 				ADF6802228C00CD40072D524 /* TextFieldEditor.swift in Sources */,
@@ -459,10 +485,10 @@
 				AD943B8F28B6B33D0070D440 /* ViewExtensions.swift in Sources */,
 				AD961D7228B4DC3800F27AA8 /* ContactsDialog.swift in Sources */,
 				ADACED4928B436F60054E7BE /* ContactViewData.swift in Sources */,
-				AD128E2428B0E4F000B004F2 /* HomeScreen.swift in Sources */,
 				AD961D6F28B4DA5000F27AA8 /* ConversationScreen.swift in Sources */,
 				AD55E4EF2BD087EB00CA9B78 /* ConversationsRepository.swift in Sources */,
 				AD943B8C28B5E3F10070D440 /* MessageViewData.swift in Sources */,
+				ADDE36DE2C18B38D001F8EB4 /* Navigation.swift in Sources */,
 				ADCCC24F2BD07A5C00F4A98C /* MessageView.swift in Sources */,
 				AD128E3228B15F1500B004F2 /* MessengerBluetoothDataSource.swift in Sources */,
 				AD55E4FC2BD0CCAE00CA9B78 /* ConversationLocalDataSource.swift in Sources */,
@@ -475,6 +501,8 @@
 				AD55E4F22BD0981200CA9B78 /* CurrentContactIDDataSource.swift in Sources */,
 				AD5AFEF028E654F3006F026E /* ConversationsScreen.swift in Sources */,
 				AD55E4EC2BD087DC00CA9B78 /* ConversationRepository.swift in Sources */,
+				ADC27F112C17C2E20022A2A6 /* ContactsUIState.swift in Sources */,
+				ADDE36E12C18B496001F8EB4 /* CurrentConversationUIState.swift in Sources */,
 				AD55E5022BD0FC7400CA9B78 /* Conversation.swift in Sources */,
 				AD55E4F62BD098AB00CA9B78 /* CurrentContactIDLocalDataSource.swift in Sources */,
 				AD55801C28B997E90027A6FE /* ArrayExtensions.swift in Sources */,
@@ -489,6 +517,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC27F082C17B79F0022A2A6 /* ContactWithLastMessageListUIState.swift in Sources */,
+				ADC27F0E2C17C2760022A2A6 /* CurrentContactIDUIState.swift in Sources */,
 				AD85DA5828B98A4800694753 /* Contact.swift in Sources */,
 				AD4483A428BA078A00116D00 /* Constants.swift in Sources */,
 				ADF6802328C00CD40072D524 /* TextFieldEditor.swift in Sources */,
@@ -498,10 +528,10 @@
 				AD943B9028B6B33D0070D440 /* ViewExtensions.swift in Sources */,
 				AD961D7328B4DC3800F27AA8 /* ContactsDialog.swift in Sources */,
 				ADACED4A28B436F60054E7BE /* ContactViewData.swift in Sources */,
-				AD128E2528B0E4F000B004F2 /* HomeScreen.swift in Sources */,
 				AD961D7028B4DA5000F27AA8 /* ConversationScreen.swift in Sources */,
 				AD55E4F02BD087EB00CA9B78 /* ConversationsRepository.swift in Sources */,
 				AD943B8D28B5E3F10070D440 /* MessageViewData.swift in Sources */,
+				ADDE36DF2C18B38D001F8EB4 /* Navigation.swift in Sources */,
 				ADCCC2502BD07A5C00F4A98C /* MessageView.swift in Sources */,
 				AD128E3328B15F1500B004F2 /* MessengerBluetoothDataSource.swift in Sources */,
 				AD55E4FD2BD0CCAE00CA9B78 /* ConversationLocalDataSource.swift in Sources */,
@@ -514,6 +544,8 @@
 				AD55E4F32BD0981200CA9B78 /* CurrentContactIDDataSource.swift in Sources */,
 				AD5AFEF128E654F3006F026E /* ConversationsScreen.swift in Sources */,
 				AD55E4ED2BD087DC00CA9B78 /* ConversationRepository.swift in Sources */,
+				ADC27F122C17C2E20022A2A6 /* ContactsUIState.swift in Sources */,
+				ADDE36E22C18B496001F8EB4 /* CurrentConversationUIState.swift in Sources */,
 				AD55E5032BD0FC7400CA9B78 /* Conversation.swift in Sources */,
 				AD55E4F72BD098AB00CA9B78 /* CurrentContactIDLocalDataSource.swift in Sources */,
 				AD55801D28B997E90027A6FE /* ArrayExtensions.swift in Sources */,

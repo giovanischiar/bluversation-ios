@@ -34,9 +34,34 @@ struct BluversationApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeScreen()
+            Navigation()
                 .environmentObject(conversationsViewModel)
                 .environmentObject(conversationViewModel)
         }
+    }
+}
+
+struct Bluversation_Previews: PreviewProvider {
+    static var previews: some View {
+        let messengerDataSource = MessengerMockDataSource()
+        let currentContactIDDataSource = CurrentContactIDLocalDataSource()
+        let conversationDataSource = ConversationLocalDataSource(messengerDataSource: messengerDataSource)
+        
+        let contactsViewModel = ConversationsViewModel(
+            contactsRepository: ConversationsRepository(
+                conversationDataSource: conversationDataSource,
+                currentContactIDDataSource: currentContactIDDataSource
+            )
+        )
+        
+        let conversationViewModel = ConversationViewModel(
+            conversationRepository: ConversationRepository(
+                conversationDataSource: conversationDataSource,
+                currentContactIDDataSource: currentContactIDDataSource
+            )
+        )
+        Navigation()
+            .environmentObject(contactsViewModel)
+            .environmentObject(conversationViewModel)
     }
 }

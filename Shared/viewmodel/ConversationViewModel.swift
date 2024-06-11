@@ -10,14 +10,14 @@ import Combine
 class ConversationViewModel: ObservableObject {
     private let conversationRepository: ConversationRepository
     
-    @Published var conversation: ConversationViewData? = nil
+    @Published var currentConversationUIState: CurrentConversationUIState = .loading
     
     init(conversationRepository: ConversationRepository) {
         self.conversationRepository = conversationRepository
         self.conversationRepository
             .conversationPublisher
-            .map { conversation in conversation.toViewData() }
-            .assign(to: &$conversation)
+            .map { conversation in CurrentConversationUIState.currentConversationLoaded(conversation.toViewData()) }
+            .assign(to: &$currentConversationUIState)
     }
     
     func send(a message: String) {
