@@ -16,6 +16,7 @@
   - [Group `view.viewdata`](#group-viewviewdata)
   - [Group `viewmodel` and `view.viewdata`](#group-viewmodel-and-viewviewdata)
   - [Group `viewmodel` and `model.repository`](#group-viewmodel-and-modelrepository)
+  - [Group `model`](#group-model)
 - [Future Tasks](#future-tasks)
 
 ## Use Cases
@@ -116,6 +117,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/viewmodel-repository-diagram.dark.svg">
   <img alt="ViewModel/Repository Relationship Diagram" src="./readme-res/diagrams/viewmodel-repository-diagram.light.svg">
+</picture>
+
+### Group `model`
+  Model structs handle the logic of the application. This diagram represents all the associations among the structs in the `model`.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/model-diagram.dark.svg">
+  <img alt="Model Diagram" src="./readme-res/diagrams/model-diagram.light.svg">
 </picture>
 
 ## Future Tasks
