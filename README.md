@@ -12,6 +12,7 @@
 - [Technologies](#technologies)
 - [Diagrams](#diagrams)
   - [Project structure](#project-structure)
+  - [Group `view` and `viewmodel`](#group-view-and-viewmodel)
 - [Future Tasks](#future-tasks)
 
 ## Use Cases
@@ -80,6 +81,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/project-structure-diagram.dark.svg">
   <img alt="Whole Project Diagram" src="./readme-res/diagrams/project-structure-diagram.light.svg">
+</picture>
+
+### Group `view` and `viewmodel`
+  These diagrams illustrate the relationship between screens from `view` and `viewmodel` classes. The arrows from the View Models represent View Data objects (structs that hold all the necessary data for the view to display), primitives, or collections encapsulated by [Publishers](https://developer.apple.com/documentation/combine/publisher), which are artifacts that encapsulate data streams. Every update in the View Data triggers the Publisher to emit these new values to the `view`, and the view updates automatically. Typically, the methods called from screens in `view` to classes in `viewmodel` trigger these changes, as represented in the diagram below by arrows from the `view` screens to `viewmodel` classes.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/view-view-model-diagram.dark.svg">
+  <img alt="View/ViewModel Relationship Diagram" src="./readme-res/diagrams/view-view-model-diagram.light.svg">
 </picture>
 
 ## Future Tasks
