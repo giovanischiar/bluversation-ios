@@ -15,6 +15,7 @@
   - [Group `view` and `viewmodel`](#group-view-and-viewmodel)
   - [Group `view.viewdata`](#group-viewviewdata)
   - [Group `viewmodel` and `view.viewdata`](#group-viewmodel-and-viewviewdata)
+  - [Group `viewmodel` and `model.repository`](#group-viewmodel-and-modelrepository)
 - [Future Tasks](#future-tasks)
 
 ## Use Cases
@@ -107,6 +108,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/viewmodel-viewdata-diagram.dark.svg">
   <img alt="ViewModel/ViewData Diagram" src="./readme-res/diagrams/viewmodel-viewdata-diagram.light.svg">
+</picture>
+
+### Group `viewmodel` and `model.repository`
+  View Models also serve as a [façade](https://en.wikipedia.org/wiki/Facade_pattern), triggering methods in `model.repository` structs. This diagram shows that each View Model has its own repository struct and illustrates all methods each View Model calls, represented by arrows from View Models to Repositories.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/viewmodel-repository-diagram.dark.svg">
+  <img alt="ViewModel/Repository Relationship Diagram" src="./readme-res/diagrams/viewmodel-repository-diagram.light.svg">
 </picture>
 
 ## Future Tasks
