@@ -18,6 +18,7 @@
   - [Group `viewmodel` and `model.repository`](#group-viewmodel-and-modelrepository)
   - [Group `model`](#group-model)
   - [Group `model.repository` and `model`](#group-modelrepository-and-model)
+  - [Group `model.repository`, `model.datasource` and `library`](#group-modelrepository-modeldatasource-and-library)
 - [Future Tasks](#future-tasks)
 
 ## Use Cases
@@ -134,6 +135,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/repository-model-diagram.dark.svg">
   <img alt="Repository Model Diagram" src="./readme-res/diagrams/repository-model-diagram.light.svg">
+</picture>
+
+### Group `model.repository`, `model.datasource`, and `library`
+  Data Sources provide their repositories with all the needed data for the application. They contain modules that make requests to the Nominatim API and consult the database. This diagram represents all the associations among the artifacts in `model.repository`, `model.datasource`, and `library`.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/repository-datasource-library-diagram.dark.svg">
+  <img alt="Repository/Data Source/Library Relationship Diagram" src="./readme-res/diagrams/repository-datasource-library-diagram.light.svg">
 </picture>
 
 ## Future Tasks
