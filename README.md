@@ -17,6 +17,7 @@
   - [Group `viewmodel` and `view.viewdata`](#group-viewmodel-and-viewviewdata)
   - [Group `viewmodel` and `model.repository`](#group-viewmodel-and-modelrepository)
   - [Group `model`](#group-model)
+  - [Group `model.repository` and `model`](#group-modelrepository-and-model)
 - [Future Tasks](#future-tasks)
 
 ## Use Cases
@@ -125,6 +126,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/model-diagram.dark.svg">
   <img alt="Model Diagram" src="./readme-res/diagrams/model-diagram.light.svg">
+</picture>
+
+### Group `model.repository` and `model`
+  These diagrams represent all the associations among the structs in `model.repository` and `model`.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./readme-res/diagrams/dark/repository-model-diagram.dark.svg">
+  <img alt="Repository Model Diagram" src="./readme-res/diagrams/repository-model-diagram.light.svg">
 </picture>
 
 ## Future Tasks
