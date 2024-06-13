@@ -3,6 +3,6 @@ struct IconBackground: Backgroundable {
     var size: Double { dimensions.iconSize }
 
     var background: Background {
-        Background(size: size).fill(color: -"backgroundColor")
+        Background(size: size).fill(color: -"backgroundColor").radius(10.8)
     }
 }

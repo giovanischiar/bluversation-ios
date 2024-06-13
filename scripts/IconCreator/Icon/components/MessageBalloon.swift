@@ -12,5 +12,7 @@ struct MessageBalloon: Tag {
             .stroke(color: self.received ? -"receivedBalloonColor" : -"sentBalloonColor")
             .stroke(width: 1)
             .fill(color: self.received ? -"receivedBalloonColor" : -"sentBalloonColor")
+            .strokeLine(cap: "round")
+            .strokeLine(join: "round")
     }
 }
