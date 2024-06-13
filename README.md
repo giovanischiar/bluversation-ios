@@ -77,6 +77,7 @@
 |:-:|:-:|
 |<img src="https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png" width="50" height="50"><br>[SwiftUI](https://developer.apple.com/xcode/swiftui/)|Design UI|  
 |<img src="https://www.bluetooth.com/wp-content/uploads/2019/10/Master-Icon-File_Logo-600x600.png" width="50" height="50"><br>[Bluetooth](https://developer.apple.com/xcode/swiftui/)|Communication between the devices|  
+|<img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" width="50" height="50"><br>[IconCreator](https://github.com/giovanischiar/icon-creator)|Generate application Icon (my own library)|
 
 ## Diagrams
   Please check <a href="https://github.com/giovanischiar/diagram-notation">this repository</a> to learn more about the notation I used to create the diagrams in this project.

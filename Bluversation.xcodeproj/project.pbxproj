@@ -75,6 +75,8 @@
 		ADDE36DF2C18B38D001F8EB4 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE36DD2C18B38D001F8EB4 /* Navigation.swift */; };
 		ADDE36E12C18B496001F8EB4 /* CurrentConversationUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE36E02C18B495001F8EB4 /* CurrentConversationUIState.swift */; };
 		ADDE36E22C18B496001F8EB4 /* CurrentConversationUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE36E02C18B495001F8EB4 /* CurrentConversationUIState.swift */; };
+		ADDE36E72C1A66B7001F8EB4 /* AppIconPalette.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDE36E62C1A66B7001F8EB4 /* AppIconPalette.xcassets */; };
+		ADDE36E82C1A66B7001F8EB4 /* AppIconPalette.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDE36E62C1A66B7001F8EB4 /* AppIconPalette.xcassets */; };
 		ADE73CB128EF7B3D00746CF2 /* MessengerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB028EF7B3D00746CF2 /* MessengerDataSource.swift */; };
 		ADE73CB228EF7B3D00746CF2 /* MessengerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB028EF7B3D00746CF2 /* MessengerDataSource.swift */; };
 		ADE73CB428EF7F4900746CF2 /* MessengerMockDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE73CB328EF7F4900746CF2 /* MessengerMockDataSource.swift */; };
@@ -122,6 +124,7 @@
 		ADCCC24E2BD07A5C00F4A98C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		ADDE36DD2C18B38D001F8EB4 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		ADDE36E02C18B495001F8EB4 /* CurrentConversationUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConversationUIState.swift; sourceTree = "<group>"; };
+		ADDE36E62C1A66B7001F8EB4 /* AppIconPalette.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIconPalette.xcassets; sourceTree = "<group>"; };
 		ADE73CB028EF7B3D00746CF2 /* MessengerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerDataSource.swift; sourceTree = "<group>"; };
 		ADE73CB328EF7F4900746CF2 /* MessengerMockDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerMockDataSource.swift; sourceTree = "<group>"; };
 		ADF6802128C00CD40072D524 /* TextFieldEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEditor.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 		AD128E1128B0E4E800B004F2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				ADDE36E62C1A66B7001F8EB4 /* AppIconPalette.xcassets */,
 				AD128E1428B0E4F000B004F2 /* Assets.xcassets */,
 				AD128E1228B0E4E800B004F2 /* BluversationApp.swift */,
 				AD55E4E42BD07EC800CA9B78 /* library */,
@@ -384,6 +388,7 @@
 			buildConfigurationList = AD128E2A28B0E4F000B004F2 /* Build configuration list for PBXNativeTarget "Bluversation (iOS)" */;
 			buildPhases = (
 				AD128E1528B0E4F000B004F2 /* Sources */,
+				ADDE36E52C1A65F5001F8EB4 /* Generate SVG Icon, Generate PNGs From SVG, Copy PNGs to Assets Folder */,
 				AD128E1628B0E4F000B004F2 /* Frameworks */,
 				AD128E1728B0E4F000B004F2 /* Resources */,
 			);
@@ -401,6 +406,7 @@
 			buildConfigurationList = AD128E2D28B0E4F000B004F2 /* Build configuration list for PBXNativeTarget "Bluversation (macOS)" */;
 			buildPhases = (
 				AD128E1B28B0E4F000B004F2 /* Sources */,
+				ADDE36EA2C1A6A16001F8EB4 /* Generate SVG Icon, Generate PNGs From SVG, Copy PNGs to Assets Folder */,
 				AD128E1C28B0E4F000B004F2 /* Frameworks */,
 				AD128E1D28B0E4F000B004F2 /* Resources */,
 			);
@@ -455,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDE36E72C1A66B7001F8EB4 /* AppIconPalette.xcassets in Resources */,
 				AD128E2628B0E4F000B004F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,11 +470,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDE36E82C1A66B7001F8EB4 /* AppIconPalette.xcassets in Resources */,
 				AD128E2728B0E4F000B004F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ADDE36E52C1A65F5001F8EB4 /* Generate SVG Icon, Generate PNGs From SVG, Copy PNGs to Assets Folder */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Shared/Assets/AppIconPalette.xcassets",
+				"$(SRCROOT)/scripts/IconCreator/Icon",
+			);
+			name = "Generate SVG Icon, Generate PNGs From SVG, Copy PNGs to Assets Folder";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Shared/Assets/AppIcon.appiconset",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash scripts/IconCreator/Library/icon-creator.sh ios ../../Shared ../Icon\n";
+		};
+		ADDE36EA2C1A6A16001F8EB4 /* Generate SVG Icon, Generate PNGs From SVG, Copy PNGs to Assets Folder */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Shared/Assets/AppIconPalette.xcassets",
+				"$(SRCROOT)/scripts/IconCreator/Icon",
+			);
+			name = "Generate SVG Icon, Generate PNGs From SVG, Copy PNGs to Assets Folder";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Shared/Assets/AppIcon.appiconset",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash scripts/IconCreator/Library/icon-creator.sh ios ../../Shared ../Icon\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD128E1528B0E4F000B004F2 /* Sources */ = {
@@ -682,7 +735,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bluversation--iOS--Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Bluversaion;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App uses bluetooth to talk and search other contatcs";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -717,7 +769,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bluversation--iOS--Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Bluversaion;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App uses bluetooth to talk and search other contatcs";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

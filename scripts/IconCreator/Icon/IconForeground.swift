@@ -5,12 +5,10 @@ struct IconForeground: Foregroundable {
     var foreground: Foreground {
         Foreground(size: size) {
             Div {
-
+                MessageBalloon(x: -27.2, y: 2, received: false)
+                MessageBalloon(x: -12, y: -22)
             }
             .position(x: 0, y: 0)
-            .dimension(width: 50, height: 50)
-            .stroke(color:  "#000000")
-            .stroke(width: 2)
         }
     }
 }
